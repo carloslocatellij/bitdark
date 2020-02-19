@@ -281,4 +281,4 @@ GitHub.sublime-settings
 #Web2py#
 /errors/
 /errors/*
-
+*/errors/

@@ -1,7 +1,0 @@
-print data
-ls
-import dbsmmaurb
-import PM_SJRP
-import PM_SJRP.models
-dir(web2py)
-data = list(dba3p(dba3p.ContasEnergia.Kwh!=None, dba3p.ContasEnergia.CodCPFL == 37160206).select())
