@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S'<class \'_mysql_exceptions.ProgrammingError\'> (1064, \'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \\\'."Id", "EntradaPonto"."Placa", "EntradaPonto"."TipoVeic", "EntradaPonto"."Data",\\\' at line 1\')'
+p3
+sS'layer'
+p4
+S'/home/www-data/web2py/applications/Qualidade_Ambiental/controllers/PontosApoio.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0x7f0326456eb0, file "/home/www-data/web2py/applications/Qualidade_Ambiental/controllers/PontosApoio.py", line 11>'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/www-data/web2py/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/home/www-data/web2py/applications/Qualidade_Ambiental/controllers/PontosApoio.py", line 176, in <module>\n  File "/home/www-data/web2py/gluon/globals.py", line 421, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/www-data/web2py/applications/Qualidade_Ambiental/controllers/PontosApoio.py", line 151, in GridEntradaPonto\n    grid = SQLFORM.smartgrid(db.EntradaPonto, editable=True, deletable=True, orderby=~db.EntradaPonto.Id)\n  File "/home/www-data/web2py/gluon/sqlhtml.py", line 3338, in smartgrid\n    user_signature=user_signature, **kwargs)\n  File "/home/www-data/web2py/gluon/sqlhtml.py", line 2702, in grid\n    cacheable=True, *expcolumns)\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/objects.py", line 2275, in select\n    return adapter.select(self.query, fields, attributes)\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/adapters/base.py", line 763, in select\n    return self._select_aux(sql, fields, attributes, colnames)\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/adapters/base.py", line 719, in _select_aux\n    rows = self._select_aux_execute(sql)\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/adapters/base.py", line 713, in _select_aux_execute\n    self.execute(sql)\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/adapters/__init__.py", line 67, in wrap\n    return f(*args, **kwargs)\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/adapters/base.py", line 413, in execute\n    rv = self.cursor.execute(command, *args[1:], **kwargs)\n  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 250, in execute\n    self.errorhandler(self, exc, value)\n  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler\n    raise errorvalue\nProgrammingError: (1064, \'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \\\'."Id", "EntradaPonto"."Placa", "EntradaPonto"."TipoVeic", "EntradaPonto"."Data",\\\' at line 1\')\n'
+p11
+s.

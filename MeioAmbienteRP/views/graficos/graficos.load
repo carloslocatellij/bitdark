@@ -1,0 +1,73 @@
+ <div id="chart_div-{{=request.cid}}"></div>
+ <script type="text/javascript">
+
+      // Carrega a API de visualização e o pacote piechart.
+
+     
+    google.charts.load('current', {'packages':['corechart', 'line' ,'annotatedtimeline'], 'language':'pt-br'});
+
+
+      // Callback que cria e preenche uma tabela de dados, instancia o gráfico de pizza, passa os dados e desenha.
+    google.charts.setOnLoadCallback(drawChart);
+
+
+      function drawChart() {debugger;
+
+        // Cria a tabela de dados.
+        
+        var chart_type = '{{=chart_type}}'
+        var div_id = "chart_div-{{=request.cid}}"
+
+        var jsonData = $.ajax({
+                url: "{{=data_url}}",
+                dataType: "json",
+                async: false
+            }).responseText;
+        var parsed_json = JSON.parse(jsonData)
+        var graph_array = parsed_json.data
+        //var data = window.JSON.stringify(parsed_json.data);
+        var data = google.visualization.arrayToDataTable(graph_array);
+
+        // Definir opções de gráfico
+
+
+        var options = {{=XML(options_dict)}}
+
+        // Instanciar e desenhar nosso gráfico, passando algumas opções, de acordo com o //tipo de grafico
+        switch(chart_type){
+            case 'bar':
+                var chart = new google.visualization.BarChart(document.getElementById(div_id));
+                break;
+            case 'pie':
+                var chart = new google.visualization.PieChart(document.getElementById(div_id));
+                break;
+            case 'column':
+                var chart = new google.visualization.ColumnChart(document.getElementById(div_id));
+                break;
+            case 'table':
+                var chart = new google.visualization.Table(document.getElementById(div_id));
+                break;
+            case 'line':
+                var chart = new google.charts.Line(document.getElementById(div_id));
+                break;
+            case 'timeline':
+                var chart = new google.visualization.AnnotatedTimeLine(document.getElementById(div_id));
+                break;
+            case 'area':
+                var chart = new google.visualization.AreaChart(document.getElementById(div_id));
+                break;
+            default:
+                var chart = new google.visualization.ColumnChart(document.getElementById(div_id));
+                break;
+
+        }
+
+        if (chart) { chart.draw(data, options);
+                     chart.drawToolbar(data,options) ;
+                    }
+
+         
+    }
+
+    </script>
+

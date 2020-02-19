@@ -1,0 +1,19 @@
+
+{{extend 'layout.html'}}
+<!-- need to source this in any view which has a LOAD chart -->
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+
+<!-- Here, data and options same for both charts -->
+<!-- user_signature works if using logged-in users ... not well tested -->
+{{ data_url = URL('plugin_google_chart','plugin_return_data.json',user_signature=False)
+  #options are documented at https://developers.google.com/chart/
+  options ={'title':'Consumo de Energia em {}'.format(predio),'width':0,'height':500}
+          }}
+
+
+
+<div class="span6">
+{{=LOAD('plugin_google_chart','plugin_google_chart.load',user_signature=True,ajax=True,
+    vars={'type':'line','data_url':data_url,'options_dict':options})
+}}
+</div>

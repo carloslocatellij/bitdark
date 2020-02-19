@@ -1,0 +1,55 @@
+{{extend 'layout.html'}}
+<script type="text/javascript" src="{{=URL(request.application,'static','js/ckeditor/ckeditor.js')}}"></script>
+ <script type="text/javascript">
+      window.onload = function()  { CKEDITOR.replace( 'editor1' );};</script>  
+
+
+<div align="center" >
+	<img src="{{=URL('static','images/logo_A3P_2017.png')}}" alt="A3P_logo" height=72% width=52% />
+</div>
+<div align="center">
+	<h1>Gerador de Gŕaficos </h1>
+	<h2>Selecione o Local, o </h2>
+	<h2>Eixo de Sustentabilidade na A3P e Ano:</h2>
+</div >
+
+
+<div align="center" >
+	{{=formConsultA3P}}
+</div>
+
+    <textarea id="editor1" name="editor1">&lt;p&gt;Valor inicial.&lt;/p&gt;</textarea>
+
+<div class= "container"  height=450px width=450px  align="center">
+	<div id= "carouselA3pDica" class= "carousel slide" data-ride= "carousel" data-interval="2000" >
+	<ol class= "carousel-indicators" > <li data-target= "#carouselA3pDica" data-slide-to= "0" class= "active" ></li> <li data-target= "#carouselA3pDica" data-slide-to= "1" ></li> <li data-target= "#carouselA3pDica" data-slide-to= "2" ></li> <li data-target= "#carouselA3pDica" data-slide-to= "3" ></li> <li data-target= "#carouselA3pDica" data-slide-to= "4" ></li> <li data-target= "#carouselA3pDica" data-slide-to= "5" ></li>  </ol> 
+    	<div class= "carousel-inner" > 
+  			<div class= "carousel-item active" ><img class= "d-block w-100" src= "{{=URL('static','images/a3p/arcondicionado.jpg')}}" alt= "primeiro slide" height=450px width=450px >	</div> 
+  			<div class= "carousel-item" > <img class= "d-block w-100" src= "{{=URL('static','images/a3p/torneira.jpg')}}" alt= "segundo slide" height=450px width=450px >	  </div>
+    		<div class= "carousel-item" > <img class= "d-block w-100" src= "{{=URL('static','images/a3p/luz.jpg')}}" alt= "terceiro slide" height=450px width=450px ></div> 
+    		<div class= "carousel-item" > <img class= "d-block w-100" src= "{{=URL('static','images/a3p/papeltoalha.png')}}" alt= "quarto slide" height=450px width=450px >		</div> 
+    		<div class= "carousel-item" > <img class= "d-block w-100" src= "{{=URL('static','images/a3p/rascunhos.jpg')}}" alt= "quinto slide" height=450px width=450px >    </div>
+    		<div> 
+    			<a class= "carousel-control-prev" href= "#carouselA3pDica" role= "button" data-slide= "prev" > 
+    				<span class= "carousel-control-prev-icon" aria-hidden="false" color="blue" ></span> 
+    				<span class= "sr-only" > Anterior </span>    </a>
+    			<a class= "carousel-control-next" href= "#carouselA3pDica" role= "button" data-slide= "next" >
+    				<span class= "carousel-control-next-icon" aria-hidden="false" color="blue"></span>
+    	 			<span class= "sr-only" > Próximo </span>     </a>
+     		</div>
+  		</div>
+	</div> 
+</div>
+
+<!-- <table class="table table-hover" align="center" >
+<div class="table-responsive" align="center" >
+	<tr>
+		<td align="center"><input type="submit" class="btn btn-primary btn-lg" value="Água" ></td>
+		<td align="center"><input type="submit" class="btn btn-primary btn-lg" value="Energia" ></td>
+	</tr>
+	<tr>
+		<td align="center"><input type="submit" class="btn btn-primary btn-lg" value="Resíduos" ></td>
+		<td align="center"><input type="submit" class="btn btn-primary btn-lg" value="Recursos" ></td>
+	</tr>
+</table>
+</div> -->

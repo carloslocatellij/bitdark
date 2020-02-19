@@ -1,0 +1,92 @@
+rows = dba3p((dba3p.ContasAgua.CodSemae == 146968) & (dba3p.ContasAgua.Data >= '2017/01/01' ) ).iterselect(dba3p.ContasAgua.CodSemae, dba3p.ContasAgua.Data, dba3p.ContasAgua.Consumo)
+print rows
+rows2 = dba3p((dba3p.ContasEnergia.CodCPFL == session.cod_cpfl) & (dba3p.ContasEnergia.Mes >= '2017/01/01' ) ).iterselect(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+print rows2
+rows2 = dba3p((dba3p.ContasEnergia.CodCPFL == 37160206) & (dba3p.ContasEnergia.Mes >= '2017/01/01' ) ).iterselect(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+print rows2
+rows = dba3p((dba3p.ContasAgua.CodSemae == 146968) & (dba3p.ContasAgua.Data >= '2017/01/01' ) & (dba3p.ContasAgua.Data <= '2017/12/01' )  ).iterselect(dba3p.ContasAgua.CodSemae, dba3p.ContasAgua.Data, dba3p.ContasAgua.Consumo)
+print rows
+request.function
+graficos()
+plotA3Penergia()
+q = db((dba3p.ContasEnergia.CodCPFL == dbentidades.Predios.CodEnergia))
+print _q
+print db._q
+print q
+quer = dba3p(dba3p.ContasEnergia.Mes >= '2017/01/01' ).iterselect(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+quer = dba3p((dba3p.ContasEnergia.Mes >= '2017/01/01' &(q) ).iterselect(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+q
+quer = dba3p((dba3p.ContasEnergia.Mes >= '2017/01/01' & q ).iterselect(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+a
+quer = dba3p((dba3p.ContasEnergia.Mes >= '2017/01/01' & q ).iterselect(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+q
+q1 = rows = dba3p((dba3p.ContasEnergia.CodCPFL == dbentidades.Predios.CodEnergia) & (dba3p.ContasEnergia.Mes >= '2017/01/01' ) ).iterselect(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+q1 = rows = db((dba3p.ContasEnergia.CodCPFL == dbentidades.Predios.CodEnergia) & (dba3p.ContasEnergia.Mes >= '2017/01/01' ) ).iterselect(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+exit()
+rows = dba3p((dba3p.ContasEnergia.CodCPFL == 37160206) & (dba3p.ContasEnergia.Mes >= '2017/01/01' ) ).iterselect(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+rows = dba3p((dba3p.ContasEnergia.CodCPFL == '37160206') & (dba3p.ContasEnergia.Mes >= '2017/01/01' ) ).iterselect(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+rows = dba3p((dba3p.ContasEnergia.CodCPFL == '37160206') & (dba3p.ContasEnergia.Mes >= '2017/01/01' ) ).select(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+print rows
+rows
+rows = dba3p((dba3p.ContasEnergia.CodCPFL == 37160206) & (dba3p.ContasEnergia.Mes >= '2017/01/01' ) ).select(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+rows = dba3p((dba3p.ContasEnergia.CodCPFL == '37160206') & (dba3p.ContasEnergia.Mes >= '2017/01/01' ) ).select(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+print rows
+rows = dba3p((dba3p.ContasEnergia.CodCPFL == '37160206') & (dba3p.ContasEnergia.Mes >= '2017/01/01' ) ).select(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+for r in rows
+for r in rows:
+  print r
+rows = dba3p((dba3p.ContasEnergia.CodCPFL == '37160206') & (dba3p.ContasEnergia.Mes >= '2017/01/01' ) ).select(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+print rows
+rows
+rows = dba3p((dba3p.ContasEnergia.CodCPFL == 37160206) & (dba3p.ContasEnergia.Mes >= '2017/01/01' ) ).select(dba3p.ContasEnergia.CodCPFL, dba3p.ContasEnergia.Mes, dba3p.ContasEnergia.Kwh)
+exit()
+rows = dbresiduos(((dbresiduos.A3pLixos.IdPredio == session.IdPredio) & (dbresiduos.A3pLixos.Data >= session.slcAno+'/01/01' ) & (dbresiduos.A3pLixos.Data <= session.slcAno+'/12/01' )  ).iterselect(dbresiduos.A3pLixos.IdPredio, dbresiduos.A3pLixos.Data, dbresiduos.A3pLixos.Qtd))
+rows = dbresiduos(((dbresiduos.A3pLixos.IdPredio == '344') & (dbresiduos.A3pLixos.Data >= '2018/01/01' ) & (dbresiduos.A3pLixos.Data <= '2018/12/01' )  ).iterselect(dbresiduos.A3pLixos.IdPredio, dbresiduos.A3pLixos.Data, dbresiduos.A3pLixos.Qtd))
+rows = dbresiduos(((dbresiduos.A3pLixos.IdPredio == '344') & (dbresiduos.A3pLixos.Data >= '2018/01/01' ) & (dbresiduos.A3pLixos.Data <= '2018/12/01')).select(dbresiduos.A3pLixos.IdPredio, dbresiduos.A3pLixos.Data, dbresiduos.A3pLixos.Qtd)
+a
+rows = dbresiduos((dbresiduos.A3pLixos.IdPredio == '344') & (dbresiduos.A3pLixos.Data >= '2018/01/01' ) & (dbresiduos.A3pLixos.Data <= '2018/12/01')).select(dbresiduos.A3pLixos.IdPredio, dbresiduos.A3pLixos.Data, dbresiduos.A3pLixos.Qtd)
+rows = dbresiduos((dbresiduos.A3pLixos.IdPredio == '344') & (dbresiduos.A3pLixos.Data >= '2018/01/01' ) & (dbresiduos.A3pLixos.Data <= '2018/12/01'))
+rows.select()
+rows = dbresiduos((dbresiduos.A3pLixos.IdPredio == '344') & (dbresiduos.A3pLixos.Data >= '2018/01/01' ) & (dbresiduos.A3pLixos.Data <= '2018/12/01'))
+rows.select()
+rows = dbentidades(dbresiduos((dbresiduos.A3pLixos.IdPredio == '344') & (dbresiduos.A3pLixos.Data >= '2018/01/01' ) & (dbresiduos.A3pLixos.Data <= '2018/12/01')))
+rows.select()
+rows = dbentidades((dbresiduos.A3pLixos.IdPredio == '344') & (dbresiduos.A3pLixos.Data >= '2018/01/01' ) & (dbresiduos.A3pLixos.Data <= '2018/12/01')).select(dbresiduos.A3pLixos.IdPredio, dbresiduos.A3pLixos.Data, dbresiduos.A3pLixos.Qtd)
+rows = dbentidades((dbresiduos.A3pLixos.IdPredio == '344') & (dbresiduos.A3pLixos.Data >= '2018/01/01' ) & (dbresiduos.A3pLixos.Data <= '2018/12/01')).select(dbresiduos.A3pLixos.IdPredio, dbresiduos.A3pLixos.Data, dbresiduos.A3pLixos.Qtd, dbentidades.Predios.Id)
+rows = db((dbresiduos.A3pLixos.IdPredio == '344') & (dbresiduos.A3pLixos.Data >= '2018/01/01' ) & (dbresiduos.A3pLixos.Data <= '2018/12/01')).select(dbresiduos.A3pLixos.IdPredio, dbresiduos.A3pLixos.Data, dbresiduos.A3pLixos.Qtd, dbentidades.Predios.Id)
+rows = ((dbresiduos.A3pLixos.IdPredio == '344') & (dbresiduos.A3pLixos.Data >= '2018/01/01' ) & (dbresiduos.A3pLixos.Data <= '2018/12/01'))
+rows = dbresiduos((dbresiduos.A3pLixos.IdPredio == '344') & (dbresiduos.A3pLixos.Data >= '2018/01/01' ) & (dbresiduos.A3pLixos.Data <= '2018/12/01')).select(dbresiduos.A3pLixos.IdPredio, dbresiduos.A3pLixos.Data, dbresiduos.A3pLixos.Qtd, dbentidades.Predios.Id)
+rows = dbresiduos((dbresiduos.A3pLixos.IdPredio == '344') & (dbresiduos.A3pLixos.Data >= '2018/01/01' ) & (dbresiduos.A3pLixos.Data <= '2018/12/01'))
+print rows
+rows = dbresiduos((dbresiduos.A3pLixos.IdPredio == '344') & (dbresiduos.A3pLixos.Data >= '2018/01/01' ) & (dbresiduos.A3pLixos.Data <= '2018/12/01'))
+print rows
+rows = dbentidades(((dbentidades.A3pLixos.IdPredio == session.IdPredio) & (dbentidades.A3pLixos.Data >= session.slcAno+'/01/01' ) & (dbentidades.A3pLixos.Data <= session.slcAno+'/12/01' )  ).iterselect(dbentidades.A3pLixos.IdPredio, dbentidades.A3pLixos.Data, dbentidades.A3pLixos.Qtd))
+exit
+rows = dbentidades(((dbentidades.ContasEnergia.CodCPFL == dbentidades.Predios.CodEnergia) & (dbentidades.Predios.Id == 344)) & (dbentidades.ContasEnergia.Mes >= '2017/01/01') & (dbentidades.ContasEnergia.Mes <= '2017/12/01' ) ).select(dbentidades.ContasEnergia.CodCPFL, dbentidades.ContasEnergia.Mes, dbentidades.ContasEnergia.Kwh)
+rows[1].Mes
+str(rows[1].Mes)
+str(rows[1].Mes).split('-')
+str(rows[1].Mes).split('-').list()
+list(str(rows[1].Mes).split('-'))
+dict(str(rows[1].Mes).split('-'))
+dict(data=str(rows[1].Mes).split('-'))
+tupl(data=str(rows[1].Mes).split('-'))
+tupla(data=str(rows[1].Mes).split('-'))
+tup(data=str(rows[1].Mes).split('-'))
+tupl(data=str(rows[1].Mes).split('-'))
+list(dict(date = str(rows[1].Mes).split('-')))
+list(dict(date = str(rows[1].Mes).split('-')))[1]
+list(dict(date = str(rows[1].Mes).split('-')))
+list(dict(date = str(rows[1].Mes).split('-')))
+tupla(str(rows[1].Mes).split('-'))
+data
+str(rows[1].Mes).split('-')
+dt = datetime.date(str(rows[1].Mes).split('-'))
+rows[1].Mes
+str(rows[1].Mes)
+rows[1].Mes.replece('datetime','')
+rows = dbentidades(((dbentidades.ContasEnergia.CodCPFL == dbentidades.Predios.CodEnergia) & (dbentidades.Predios.Id == 344)) & (dbentidades.ContasEnergia.Mes >= '2017/01/01') & (dbentidades.ContasEnergia.Mes <= '2017/12/01' ) ).select(dbentidades.ContasEnergia.CodCPFL, dbentidades.ContasEnergia.Mes, dbentidades.ContasEnergia.Kwh)
+exit
+db.rollback ()
+exit
+exit()

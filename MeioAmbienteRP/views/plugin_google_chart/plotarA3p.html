@@ -1,0 +1,23 @@
+{{extend 'layout.html'}}
+{{=response.toolbar()}}
+<!-- precisa criar isso em qualquer exibição que tenha um gráfico -->
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>     
+<!-- Aqui, os dados e as opções são os mesmos para ambos os gráficos -->
+<!-- user_signature funciona se você usar usuários que efetuaram login ... não foi bem testado -->
+<!--  Nos seus próprios aplicativos, você precisa fornecer essa função, o que significa substituir o data_url pelo seu. -->
+{{ data_url = URL('graficos','return_data.json',user_signature=True)
+    #options are documented at https://developers.google.com/chart/
+    options ={'title':'Consumo de Energia na Sec. do Meio Ambiente','width':0,'height':500}
+            }}
+
+<div class="span6">
+{{=LOAD('google_chart','google_chart.load',user_signature=True,ajax=True,
+vars={'type':'line','data_url':data_url,'options_dict':options})
+}}
+</div>
+     
+<div class="span6">
+{{=LOAD('google_chart','google_chart.load',user_signature=True,ajax=True,
+vars={'type':'bar','data_url':data_url,'options_dict':options})
+}}
+</div>

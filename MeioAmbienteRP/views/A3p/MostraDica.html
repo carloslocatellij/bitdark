@@ -1,0 +1,45 @@
+{{extend 'layout.html'}}
+
+<session>
+<div class="jumbotron" style="font-size: 98%"   >
+
+<h1 align="center">{{=' '.join(x.capitalize() for x in 'Dica_de_Sustentabilidade'.split('_'))}}</h1>
+
+</br>
+</br>
+
+<p aling="center">{{=A('Editar Dica', _href=URL('EditaDica', args=request.args))}}</p>
+
+<br />
+<h1 align="center">{{=Titulo}}</h1>
+
+</br>
+
+<div  style="font-size:98%; -webkit-border-radius: 6px; -moz-border-radius:6px; border-radius:6px;
+-webkit-box-shadow: -1px -1px 3px #000000; -moz-box-shadow: -1px -1px 3px #000000;
+box-shadow: -1px -1px 3px #000000; background-image: -moz-linear-gradient(128deg, #096B09, #0E6B37 32%)"; align="center" >
+{{for tgg in dtag:}}
+    {{for tag in tags:}}
+        {{if tag == tgg:}}
+<button type="button" class="btn btn-primary"><h5>{{=BEAUTIFY(tag)}}</h5><span class="badge badge-danger">{{=dtag[tgg]}}</span><span class="sr-only"></span>
+</button>
+        {{pass}}
+    {{pass}}
+{{pass}}
+</div>
+</br>
+<div style="-webkit-border-radius: 6px; -moz-border-radius:6px; border-radius:6px;
+-webkit-box-shadow: -1px -1px 3px #000000; -moz-box-shadow: -1px -1px 3px #000000;
+box-shadow: -1px -1px 3px #000000; background-image: -moz-linear-gradient(128deg, #096B09, #0E6B37 32%);
+background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0.00, #0E6B37), color-stop(0.32, #096B09));
+border: 0px solid #000000; background-color: #34a353; padding: 10px; font-family: Verdana, Geneva, sans-serif;
+font-size: 100%; color: #000f64; text-align: justify; outline: 0px solid #000000">
+{{=CENTER(XML(body))}}
+</div>
+
+</br>
+
+{{=BEAUTIFY('Criado por {} em: {}'.format(autor, datapost)) }}
+
+</div>
+</session>

@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S'<type \'exceptions.RuntimeError\'> Failure to connect, tried 5 times:\nTraceback (most recent call last):\n  File "/home/smmau/Downloads/Programador/web2py/gluon/packages/dal/pydal/base.py", line 440, in __init__\n    self._dbname = REGEX_DBNAME.match(uri).group()\nAttributeError: \'NoneType\' object has no attribute \'group\'\n'
+p3
+sS'layer'
+p4
+S'/home/smmau/Downloads/Programador/web2py/applications/MeioAmbienteRP/models/db.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0x7faf7d4e68b0, file "/home/smmau/Downloads/Programador/web2py/applications/MeioAmbienteRP/models/db.py", line 7>'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/smmau/Downloads/Programador/web2py/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/home/smmau/Downloads/Programador/web2py/applications/MeioAmbienteRP/models/db.py", line 38, in <module>\n    check_reserved=[\'all\'])\n  File "/home/smmau/Downloads/Programador/web2py/gluon/packages/dal/pydal/base.py", line 170, in __call__\n    obj = super(MetaDAL, cls).__call__(*args, **kwargs)\n  File "/home/smmau/Downloads/Programador/web2py/gluon/packages/dal/pydal/base.py", line 475, in __init__\n    "Failure to connect, tried %d times:\\n%s" % (attempts, tb)\nRuntimeError: Failure to connect, tried 5 times:\nTraceback (most recent call last):\n  File "/home/smmau/Downloads/Programador/web2py/gluon/packages/dal/pydal/base.py", line 440, in __init__\n    self._dbname = REGEX_DBNAME.match(uri).group()\nAttributeError: \'NoneType\' object has no attribute \'group\'\n\n'
+p11
+s.

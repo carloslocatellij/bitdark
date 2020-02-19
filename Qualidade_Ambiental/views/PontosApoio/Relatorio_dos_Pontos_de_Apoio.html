@@ -1,0 +1,43 @@
+{{extend 'layout.html'}}
+
+
+{{block header}}
+<div class="jumbotron jumbotron-fluid background" style="background-color: #333; color:white; padding:10px;word-wrap:break-word;">
+  <div class="container center">
+    <h1 class="display-5">{{='Qualidade Ambiental'}}</h1>
+    <h2>{{='Relatório dos Pontos de Apoio'}}</h2>
+  </div>
+
+</div>
+    <div class="jumbotron jumbotron-fluid" style="padding:10px;word-wrap:break-word;">
+      <div class="container center">
+        <a class="btn btn-primary" href="{{=URL('Qualidade_Ambiental','default','index')}}">QUALI. AMB.</a>
+        <a class="btn btn-primary" href="{{=URL('Qualidade_Ambiental','PontosApoio','Pontos_de_Apoio')}}">Pontos de Apoio.</a>
+      </div>
+    </div>
+{{end}}
+
+
+{{=ctrlrelat.custom.begin}}
+
+<div align="center">
+  <table>
+
+    <td>Inicio: <div>{{=ctrlrelat.custom.widget['Inicio']}}</div></td>
+
+    <td>Fim: <div>{{=ctrlrelat.custom.widget['Fim']}}</div></td>
+
+  </table>
+</div>
+{{=ctrlrelat.custom.submit}}
+{{=ctrlrelat.custom.end}}
+
+
+<div align="center"><h2>{{='Relatório por Ponto de Apoio'}}</h2></div>
+<div align="center"><h4>{{='período selecionado: {} até {}'.format(datamin, datamax) }}</h4></div>
+
+{{=XML(DIV(TABLE(THEAD(TR(columns)),TBODY(querysql ), _align='center' ,  _width='85%' , _border='2px')) )}}
+
+</br> 
+<div align="center"><h3>{{='Soma dos Pontos de Apoio'}}</h3></div>
+{{=XML(DIV(TABLE(THEAD(TR(columnsT)), TBODY(somaRelatPontos), _align='center' ,  _width='85%' , _border='2px')) )}}

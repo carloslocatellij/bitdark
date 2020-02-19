@@ -1,0 +1,156 @@
+{{extend 'layout.html'}}
+
+{{block header}}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- Estilos CSS para o Drop dOw Menu -->    
+    <style type="text/css">
+        .sf-menu li {
+          position: relative;
+        }
+        .sf-menu li > ul {
+          position: absolute;
+          display: none;
+          top: 100%;
+          z-index: 99;
+        }                  
+        .sf-menu > li .mega-menu,
+        .sf-menu li > ul {
+          margin-top: 1px;
+          text-align: left;
+          list-style: none;
+          background-color: #3c3c3c;
+          min-width: 12em;          
+          *width: 12em;        
+          border-radius: 0 0 3px 3px;
+        } 
+    </style>
+    <!-- Fim Estilos CSS para o Drop dOw Menu -->   
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <div class="jumbotron jumbotron-fluid background" style="background-color: #333; color:white; padding:20px;word-wrap:break-word;">
+      <div class="container center">
+        <h1 class="display-4">SMMAURB - Secretaria Municipal do Meio Ambiente e Urbanismo</h1>
+      </div>
+    </div>                                        
+                 
+{{end}}
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>    
+
+
+
+    <div class="col-md-12" style="align: center">
+      {{if 'message' in globals():}}
+      <h2>{{=message}}</h2>
+      {{elif 'content' in globals():}}
+      {{=content}}
+      {{else:}}
+      {{=BEAUTIFY(response._vars)}}
+      {{pass}}
+     </div>
+
+<div class="row">
+  <div class="wrapper">
+    <nav id="sidebar" onmouseover="myFunction()" >
+    <ul class="list-unstyled components">
+       <div class="sidebar-header">
+                    <li class="act">
+           <a class="btn btn-primary dropdown-toggle" type="button" 
+href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" >  A3P  </a> <span class="caret"></span> 
+                     </li> 
+        {{=UL(  
+          (A('A3P - Gráficos', _href=URL('A3p', 'FConsultA3P'),  _class="btn btn-success" )),
+        (A('A3P - Registrar', _href=URL('A3p', 'FA3pAgua'),  _class="btn btn-primary" )),
+        (A('Dicas da A3P', _href=URL('A3p', 'Dicas'),  _class="btn btn-success" )),
+        (A('Estoque', _href=URL('default', 'GestaoDeEstoque'),  _class="btn btn-secondary" )),
+        _id="homeSubmenu", _class="collapse list-unstyled")
+        }}
+                  <!--  <li class="act2 " height=100%>
+           <a class="btn btn-secondary dropdown-toggle" type="button" 
+href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" >  Menu  </a> <span class="caret"></span> 
+                    </li> -->
+            </div>
+      </ul>
+  </nav>
+
+  <div id="content">
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info " >
+                <i class="fas fa-align-left"></i>
+                <span>Menu</span>
+            </button>
+
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+
+<div class= "container"  style="height: 55%; width: 55%">
+  <div id= "carouselA3pDica" class= "carousel slide" data-ride= "carousel" data-interval="4000" >
+    <ol class= "carousel-indicators" > <li data-target= "#carouselA3pDica" data-slide-to= "0" class= "active" ></li> <li data-target= "#carouselA3pDica" data-slide-to= "1" ></li> <li data-target= "#carouselA3pDica" data-slide-to= "2" ></li> <li data-target= "#carouselA3pDica" data-slide-to= "3" ></li> <li data-target= "#carouselA3pDica" data-slide-to= "4" ></li> <li data-target= "#carouselA3pDica" data-slide-to= "5" ></li>  </ol>
+    <div class= "carousel-inner" >
+      <div class= "carousel-item active" ><img class= "d-block w-100" src= "{{=URL('static','images/Selo_PMVA_1o.jpg')}}" alt= "primeiro slide" height=30% width=30% ></div>
+       {{dicas = db().select(db.A3pDica.id, db.A3pDica.Titulo, orderby=db.A3pDica.Titulo)}}
+       {{for dica in dicas:}}
+       {{=DIV(A(LOAD('A3p', 'MostraDica.load', dica.id,  ajax=True), _href=URL('A3p' ,'MostraDica.html' ,args=dica.id) ), _class="carousel-item")}}
+       {{pass}}
+              <div>
+          <a class= "carousel-control-prev" href= "#carouselA3pDica" role= "button" data-slide= "prev" >
+            <span class= "carousel-control-prev-icon" aria-hidden="false" color="blue" ></span>
+            <span class= "sr-only" > Anterior </span>    </a>
+          <a class= "carousel-control-next" href= "#carouselA3pDica" role= "button" data-slide= "next" >
+            <span class= "carousel-control-next-icon" aria-hidden="false" color="blue"></span>
+            <span class= "sr-only" > Próximo </span>     </a>
+       </div>
+    </div>
+  </div>
+  <h6>Você visitou este site: {{=counter}} vezes</h3>
+    <ol style="word-wrap:break-word;">
+      <li>{{=XML(T('You visited the url %s', A(request.env.path_info,_href=request.env.path_info)))}}</li>
+    </ol>
+</div>
+
+<script  type="text/javascript"  charset="utf-8"> 
+    (function(w,d,t,f){  w[f]=w[f]||function(c,k,n){s=w[f],k=s['k']=(s['k']||(k?('&k='+k):''));s['c']= 
+    c=(c  instanceof  Array)?c:[c];s['n']=n=n||0;L=d.createElement(t),e=d.getElementsByTagName(t)[0]; 
+    L.async=1;L.src='//feed.aqicn.org/feed/'+(c[n].city)+'/'+(c[n].lang||'')+'/feed.v1.js?n='+n+k; 
+    e.parentNode.insertBefore(L,e);  };  })(  window,document,'script','_aqiFeed'  );   
+</script>
+
+<span id=city-aqi-container></span>
+ 
+<script  type="text/javascript"  charset="utf-8"> 
+    _aqiFeed({ 
+        display:"<div style='%style;max-width:180px;text-align:center;'><large>A Qualidade do Ar em   Rio Preto</large> <div style='font-size:64px;height:90px;'>%aqiv </div> %impact <div style='font-size:9px'>%attribution</div><div>%time</div></div> " ,
+        container:"city-aqi-container",  city:"/brazil/sao-paulo/sao-jose-do-rio-preto/", lang:"pt"}); 
+</script>
+
+<!-- Scrip para o Drop dOw do Menu ** JS/COMPRESSED necessário ** -->
+<script src="js/compressed.js"></script>
+<script>
+  function documentReadyInit() {
+    if (jQuery().superfish) {
+      jQuery('ul.sf-menu').superfish({
+        delay:       300,
+        animation:   {opacity:'show'},
+        animationOut: {opacity: 'hide'},
+        speed:       'fast',
+        disableHI:   false,
+        cssArrows:   true,
+        autoArrows:  true
+      });
+    }   
+  }
+  jQuery(document).ready( function() {
+    documentReadyInit();
+  });
+</script>
+<!-- Fim Script para o Drop dOw Menu -->

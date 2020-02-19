@@ -1,0 +1,42 @@
+{{extend 'layout.html'}}
+{{=response.toolbar()}}
+
+<!-- precisa criar isso em qualquer exibição que tenha um gráfico -->
+     <!-- Carrega a API do AJAX -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<!-- Aqui, os dados e as opções são os mesmos para ambos os gráficos -->
+<!-- user_signature funciona se você usar usuários que efetuaram login ... não foi bem testado -->
+<!--  Nos seus próprios aplicativos, você precisa fornecer essa função, o que significa substituir o data_url pelo seu. -->
+{{	data_url = URL('graficos','return_data.json',user_signature=True) }}
+{{
+    options ={'width':1000,'height':500, 'colors': ['#0422ae', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6']}
+}}
+<div align="center" >
+<img src="{{=URL('static','images/logo_A3P_2017.png')}}" alt="A3P_logo" height=72% width=52% />
+</div>
+<div align="center">
+<h2 >{{='A3P - {} em:\n {} - no ano de  {}'.format(ramo,predio,ano)}}</h1>
+</div>
+
+</br>
+<table , align='center'>
+<tr>
+	</br>
+<div class="span6", align='center'>
+{{=LOAD('graficos','graficos.load',user_signature=True,ajax=True,
+vars={'type':tipograf,'data_url':data_url,'options_dict':options})
+}}
+</div>
+</tr>
+</table>
+
+<p>{{=grade}}</p>
+
+	</br>
+<div class="span6", align='center'>
+{{=LOAD('graficos','graficos.load',user_signature=True,ajax=True,
+vars={'type':'column','data_url':data_url,'options_dict':options})
+}}
+</div>
+

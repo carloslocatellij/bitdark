@@ -1,0 +1,26 @@
+{{extend 'layout.html'}}
+
+
+{{block header}}
+<div class="jumbotron jumbotron-fluid background" style="background-color: #333; color:white; padding:10px;word-wrap:break-word;">
+  <div class="container center">
+    <h1 class="display-5">{{='Qualidade Ambiental'}}</h1>
+    <h2>{{=' '.join(x.capitalize() for x in request.function.split('_'))}}</h2>
+  </div>
+
+</div>
+    <div class="jumbotron jumbotron-fluid" style="padding:10px;word-wrap:break-word;">
+      <div class="container center">
+        <a class="btn btn-primary" href="{{=URL('Qualidade_Ambiental','default','index')}}">QUALI. AMB.</a>
+        <a class="btn btn-primary" href="{{=URL('Qualidade_Ambiental','PontosApoio','Pontos_de_Apoio')}}">Pontos de Apoio.</a>
+      </div>
+    </div>
+{{end}}
+
+<div align="center" class="jumbotron jumbotron-fluid" style="padding:10px;word-wrap:break-word"; >
+{{=ctrlplaca}}
+  <h2>{{='Relatório Por Placa'}}</h2>
+{{=XML(DIV(SQLTABLE(grdRelatPlaca, headers='fieldname:capitalize', _textalign='center' ,  _width='85%' , _border='2px',), _align='center'), sanitize=False,permitted_tags=['table'])}}
+</div>
+
+{{=response.toolbar()}}

@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S'<type \'exceptions.RuntimeError\'> Failure to connect, tried 5 times:\nTraceback (most recent call last):\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/base.py", line 455, in __init__\n    self._adapter = adapter(**kwargs)\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/adapters/__init__.py", line 40, in __call__\n    obj = super(AdapterMeta, cls).__call__(*args, **kwargs)\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/adapters/base.py", line 369, in __init__\n    super(SQLAdapter, self).__init__(*args, **kwargs)\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/adapters/base.py", line 53, in __init__\n    self.reconnect()\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/connection.py", line 152, in reconnect\n    self.connection = self.connector()\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/adapters/mysql.py", line 52, in connector\n    return self.driver.connect(**self.driver_args)\n  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 86, in Connect\n    return Connection(*args, **kwargs)\n  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 204, in __init__\n    super(Connection, self).__init__(*args, **kwargs2)\nOperationalError: (1044, "Access denied for user \'DBGrnt\'@\'%\' to database \'TConect\'")\n'
+p3
+sS'layer'
+p4
+S'/home/www-data/web2py/applications/MeioAmbienteRP/models/dbsmmaurb.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0x7fd3235089b0, file "/home/www-data/web2py/applications/MeioAmbienteRP/models/dbsmmaurb.py", line 3>'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/www-data/web2py/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/home/www-data/web2py/applications/MeioAmbienteRP/models/dbsmmaurb.py", line 15, in <module>\n    db = DAL(\'mysql://DBGrnt:,.~~Grnt861@10.7.0.28/TConect\',  migrate_enabled=configuration.get(\'db.migrate\'))\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/base.py", line 170, in __call__\n    obj = super(MetaDAL, cls).__call__(*args, **kwargs)\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/base.py", line 475, in __init__\n    "Failure to connect, tried %d times:\\n%s" % (attempts, tb)\nRuntimeError: Failure to connect, tried 5 times:\nTraceback (most recent call last):\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/base.py", line 455, in __init__\n    self._adapter = adapter(**kwargs)\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/adapters/__init__.py", line 40, in __call__\n    obj = super(AdapterMeta, cls).__call__(*args, **kwargs)\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/adapters/base.py", line 369, in __init__\n    super(SQLAdapter, self).__init__(*args, **kwargs)\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/adapters/base.py", line 53, in __init__\n    self.reconnect()\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/connection.py", line 152, in reconnect\n    self.connection = self.connector()\n  File "/home/www-data/web2py/gluon/packages/dal/pydal/adapters/mysql.py", line 52, in connector\n    return self.driver.connect(**self.driver_args)\n  File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 86, in Connect\n    return Connection(*args, **kwargs)\n  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 204, in __init__\n    super(Connection, self).__init__(*args, **kwargs2)\nOperationalError: (1044, "Access denied for user \'DBGrnt\'@\'%\' to database \'TConect\'")\n\n'
+p11
+s.

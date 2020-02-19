@@ -1,0 +1,53 @@
+{{extend 'layout.html'}}
+{{from unicodedata import normalize}}
+    <meta charset = "UTF-8" > 
+    <script src="{{=URL('static', 'd3-wordcloud-master/lib/d3/d3.js')}}" charset = "utf-8"></script>
+    <script src="{{=URL('static','d3-wordcloud-master/lib/d3/d3.layout.cloud.js')}}"></script>
+    <script src="{{=URL('static','d3-wordcloud-master/d3.wordcloud.js')}}"></script>
+
+
+<div class="jumbotron">
+<h1 align="center">{{=' '.join(x.capitalize() for x in 'Dicas_de_Sustentabilidade_da_A3P'.split('_'))}}</h1>
+
+<div id='wordcloud' align="center"></div>
+
+[ {{=A('busca', _href=URL('busca'))}} ]
+    <br />
+
+
+<script>
+
+    {{palavras = []}}
+    {{dicio = {} }}
+    {{for tag in dtag:}}
+
+        {{dicio['text'] = tag }}
+        {{dicio['size'] = int(dtag[tag])}}
+        {{palavras.append(dicio)}}
+        {{dicio = {} }}
+        {{pass}}
+      d3.wordcloud()
+        .size([420, 270])
+        .selector('#wordcloud')
+        .words({{=XML(str(palavras).replace("'text'",'text').replace("'size'",'size').replace('''"''','').replace('<div>','').replace('</div>',''))}})
+
+//   retornar neste formato:      .words([{text: 'Reduzir',size: 1}, {text: 'Qualidade',size: 1}])
+        .onwordclick(function(d, i) {if (d.href) { window.location = d.href; }})
+        .start()
+    </script>
+
+<div  style="font-size:98%; -webkit-border-radius: 6px; -moz-border-radius:6px; border-radius:6px; -webkit-box-shadow: -1px -1px 3px #000000; -moz-box-shadow: -1px -1px 3px #000000; box-shadow: -1px -1px 3px #000000; background-image: -moz-linear-gradient(128deg, #127B12, #1E7B67 32%)"; align="center">
+    
+
+    {{#for tag in dtag:}}
+    <!--<button type="button" class="btn btn-outline-primary" >{{=H6(tag,(SPAN( dtag[tag] , _class="badge badge-success")))}}</button>-->
+    {{#pass}}
+</div>
+
+<ul>
+    {{for MostraDica in dicas:}}
+     {{=LI(A(MostraDica.Titulo, _href=URL('MostraDica', args=MostraDica.id)))}}
+{{pass}}
+</ul>
+[ {{=A('Postar Dica', _href=URL('PostaDica'))}} ]
+</div>

@@ -1,0 +1,45 @@
+{{extend 'layout.html'}}
+
+
+{{block header}}
+<div class="jumbotron jumbotron-fluid background" style="background-color: #333; color:white; padding:10px;word-wrap:break-word;">
+  <div class="container center">
+    <h1 class="display-5">{{='Qualidade Ambiental'}}</h1>
+    <h2>{{='Gestão de '+' '.join(x.capitalize() for x in request.function.split('_'))}}</h2>
+  </div>
+
+</div>
+    <div class="jumbotron jumbotron-fluid" style="padding:10px;word-wrap:break-word;">
+      <div class="container center">
+
+        <a class="btn btn-primary" href="{{=URL('MeioAmbienteRP','default','index')}}">SMMAURB</a>
+        <a class="btn btn-primary" href="{{=URL('Qualidade_Ambiental','default','index')}}">QUALI. AMB.</a>
+
+      </div>
+    </div>
+{{end}}
+
+
+    <div class="jumbotron jumbotron-fluid" style="padding:10px;word-wrap:break-word;">
+     <div class="container center">
+      <a class="btn btn-primary" href="{{=URL('Qualidade_Ambiental','PontosApoio','FormEntradaPonto')}}">Formulário de Entrada</a>   
+      <a class="btn btn-primary" href="{{=URL('Qualidade_Ambiental','PontosApoio','Relatorio_dos_Pontos_de_Apoio')}}">RELATÓRIOS</a>
+      <a class="btn btn-primary" href="{{=URL('Qualidade_Ambiental','PontosApoio','grafico_por_ponto')}}">GRÁFICOS POR P.A.</a>
+      <a class="btn btn-primary" href="{{=URL('Qualidade_Ambiental','PontosApoio','grafico_por_residuo')}}">GRÁFICOS POR RESÍDUO.</a>
+      <a class="btn btn-primary" href="{{=URL('Qualidade_Ambiental','PontosApoio','relatorio_de_placas')}}">PLACAS</a>
+     </div>
+    </div>
+
+
+
+
+
+{{if len(response._vars)==1:}}
+
+{{=BEAUTIFY(response._vars[next(iter(response._vars))])}}
+
+{{elif len(response._vars)>1:}}
+
+{{=BEAUTIFY(response._vars)}}
+
+{{pass}}

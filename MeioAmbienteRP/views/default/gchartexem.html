@@ -1,0 +1,36 @@
+
+    <!--Carrega a API do AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // Carrega a API de visualização e o pacote corechart.
+
+      google.charts.load('current', {'packages':['corechart']});
+      // Defina um retorno de chamada para ser executado quando a API de visualização do Google for carregada.
+
+      google.charts.setOnLoadCallback(drawChart);
+      // Callback que cria e preenche uma tabela de dados, instancia o gráfico de pizza, passa os dados e desenha.
+
+      function drawChart() {
+        // Cria a tabela de dados.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Mushrooms', 3],
+          ['Onions', 1],
+          ['Olives', 1],
+          ['Zucchini', 1],
+          ['Pepperoni', 2] ]);
+
+        // Definir opções de gráfico
+        var options = {'title':'How Much Pizza I Ate Last Night', 'width':400, 'height':300};
+
+        // Instanciar e desenhar nosso gráfico, passando algumas opções.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <!--Div -conteiner do gráfico no html-->
+    <div id="chart_div"></div>
+
+

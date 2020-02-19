@@ -1,0 +1,895 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.TypeError'> unsupported operand type(s) for +: 'int' and 'NoneType'"
+p3
+sS'layer'
+p4
+S'/home/www-data/web2py/applications/Qualidade_Ambiental/controllers/plotdados.py'
+p5
+sS'code'
+p6
+S'<code object <module> at 0x7f85d6f3f8b0, file "/home/www-data/web2py/applications/Qualidade_Ambiental/controllers/plotdados.py", line 26>'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.TypeError object>"
+p13
+sS'__str__'
+p14
+S"<method-wrapper '__str__' of exceptions.TypeError object>"
+p15
+sS'__reduce__'
+p16
+S'<built-in method __reduce__ of exceptions.TypeError object>'
+p17
+sS'__dict__'
+p18
+S'{}'
+p19
+sS'message'
+p20
+S'"unsupported operand type(s) for +: \'int\' and \'NoneType\'"'
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of exceptions.TypeError object>'
+p23
+sS'__init__'
+p24
+S"<method-wrapper '__init__' of exceptions.TypeError object>"
+p25
+sS'__setattr__'
+p26
+S"<method-wrapper '__setattr__' of exceptions.TypeError object>"
+p27
+sS'__reduce_ex__'
+p28
+S'<built-in method __reduce_ex__ of exceptions.TypeError object>'
+p29
+sS'__new__'
+p30
+S'<built-in method __new__ of type object>'
+p31
+sS'__format__'
+p32
+S'<built-in method __format__ of exceptions.TypeError object>'
+p33
+sS'__class__'
+p34
+S"<type 'exceptions.TypeError'>"
+p35
+sS'__doc__'
+p36
+S"'Inappropriate argument type.'"
+p37
+sS'__getitem__'
+p38
+S"<method-wrapper '__getitem__' of exceptions.TypeError object>"
+p39
+sS'__setstate__'
+p40
+S'<built-in method __setstate__ of exceptions.TypeError object>'
+p41
+sS'__getattribute__'
+p42
+S"<method-wrapper '__getattribute__' of exceptions.TypeError object>"
+p43
+sS'args'
+p44
+S'("unsupported operand type(s) for +: \'int\' and \'NoneType\'",)'
+p45
+sS'__subclasshook__'
+p46
+S'<built-in method __subclasshook__ of type object>'
+p47
+sS'__unicode__'
+p48
+S'<built-in method __unicode__ of exceptions.TypeError object>'
+p49
+sS'__delattr__'
+p50
+S"<method-wrapper '__delattr__' of exceptions.TypeError object>"
+p51
+sS'__repr__'
+p52
+S"<method-wrapper '__repr__' of exceptions.TypeError object>"
+p53
+sS'__hash__'
+p54
+S"<method-wrapper '__hash__' of exceptions.TypeError object>"
+p55
+ssS'evalue'
+p56
+S"unsupported operand type(s) for +: 'int' and 'NoneType'"
+p57
+sS'request'
+p58
+cgluon.html
+XML_unpickle
+p59
+(S's\x15`\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>Qualidade_Ambiental</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>plotdados</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-3a49723e-43ec-4749-ba05-8e59b10f7e85<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_qualidade_ambiental</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-3220a474-40cc-4adc-b8f4-e61d0663bb51<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-704b1c58-5f73-46f5-a7b1-167cc224fc8a<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">username-smmau-004-pc004-8888</td><td style="vertical-align:top;">:</td><td><div>2|1:0|10:1576153233|29:username-smmau-004-pc004-8888|44:ZGM4ZTMyYjVlYTE5NGE0YmFhNjExZTNhOWU2NWQ1NTI=|3cc8569f34d26f9746b5d9bdbe3de1dc7eea7528b5843e1b9aab5e1ef6eb2b31<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">CONTENT_LENGTH</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">CONTENT_TYPE</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">DOCUMENT_ROOT</td><td style="vertical-align:top;">:</td><td><div>/usr/share/nginx/html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTPS</td><td style="vertical-align:top;">:</td><td><div>on</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>image/webp,*/*</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>pt-BR</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>username-smmau-004-pc004-8888=&quot;2|1:0|10:1576153233|29:username-smmau-004-pc004-8888|44:ZGM4ZTMyYjVlYTE5NGE0YmFhNjExZTNhOWU2NWQ1NTI=|3cc8569f34d26f9746b5d9bdbe3de1dc7eea7528b5843e1b9aab5e1ef6eb2b31&quot;; session_id_qualidade_ambiental=127.0.0.1-3220a474-40cc-4adc-b8f4-e61d0663bb51; session_id_welcome=127.0.0.1-704b1c58-5f73-46f5-a7b1-167cc224fc8a; _xsrf=2|e4af2d7d|4e87312c03b6f06245bddee51b4d3388|1576147839; session_id_admin=127.0.0.1-3a49723e-43ec-4749-ba05-8e59b10f7e85</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_DNT</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>smmau-004-pc004</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_REFERER</td><td style="vertical-align:top;">:</td><td><div>https://smmau-004-pc004/Qualidade_Ambiental/PontosApoio/grafico_por_ponto</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/Qualidade_Ambiental/plotdados/pontores.png</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>43174</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_SCHEME</td><td style="vertical-align:top;">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_URI</td><td style="vertical-align:top;">:</td><td><div>/Qualidade_Ambiental/plotdados/pontores.png</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>smmau-004-pc004</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>nginx/1.14.0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">UWSGI_SCHEME</td><td style="vertical-align:top;">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/www-data/web2py/applications/Qualidade_Ambiental/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/www-data/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">content_length</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">content_type</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">document_root</td><td style="vertical-align:top;">:</td><td><div>/usr/share/nginx/html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/www-data/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>image/webp,*/*</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>pt-BR</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>username-smmau-004-pc004-8888=&quot;2|1:0|10:1576153233|29:username-smmau-004-pc004-8888|44:ZGM4ZTMyYjVlYTE5NGE0YmFhNjExZTNhOWU2NWQ1NTI=|3cc8569f34d26f9746b5d9bdbe3de1dc7eea7528b5843e1b9aab5e1ef6eb2b31&quot;; session_id_qualidade_ambiental=127.0.0.1-3220a474-40cc-4adc-b8f4-e61d0663bb51; session_id_welcome=127.0.0.1-704b1c58-5f73-46f5-a7b1-167cc224fc8a; _xsrf=2|e4af2d7d|4e87312c03b6f06245bddee51b4d3388|1576147839; session_id_admin=127.0.0.1-3a49723e-43ec-4749-ba05-8e59b10f7e85</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_dnt</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>smmau-004-pc004</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_referer</td><td style="vertical-align:top;">:</td><td><div>https://smmau-004-pc004/Qualidade_Ambiental/PontosApoio/grafico_por_ponto</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">https</td><td style="vertical-align:top;">:</td><td><div>on</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>smmau-004-pc004</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>smmau-004-pc004.REDE-EMPRO.empro.com.br</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/Qualidade_Ambiental/plotdados/pontores.png</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>43174</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_scheme</td><td style="vertical-align:top;">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/Qualidade_Ambiental/plotdados/pontores.png</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>smmau-004-pc004</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>nginx/1.14.0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi.node</td><td style="vertical-align:top;">:</td><td><div>smmau-004-pc004</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi.version</td><td style="vertical-align:top;">:</td><td><div>2.0.18</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi_node</td><td style="vertical-align:top;">:</td><td><div>smmau-004-pc004</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi_scheme</td><td style="vertical-align:top;">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uwsgi_version</td><td style="vertical-align:top;">:</td><td><div>2.0.18</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>/home/www-data/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.17.2-stable+timestamp.2018.10.06.18.54.02</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;wsgi_errors&#x27;, mode &#x27;w&#x27; at 0x7f85eb168270&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;built-in function uwsgi_sendfile&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi._Input object at 0x7f85f1b10cc0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;wsgi_errors&#x27;, mode &#x27;w&#x27; at 0x7f85eb168270&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;built-in function uwsgi_sendfile&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;uwsgi._Input object at 0x7f85f1b10cc0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>png</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>/home/www-data/web2py/applications/Qualidade_Ambiental/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>pontores</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/www-data/web2py/applications/Qualidade_Ambiental/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/www-data/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/www-data/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_py2</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>smmau-004-pc004</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>smmau-004-pc004.REDE-EMPRO.empro.com.br</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.17.2-stable+timestamp.2018.10.06.18.54.02</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_scheduler</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2019, 12, 16, 8, 36, 14, 92379)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>png</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/Qualidade_Ambiental/plotdados/pontores.png</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2019, 12, 16, 11, 36, 14, 92416)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x7f85e0453250&gt;</div></td></tr></table></div>'
+tRp60
+sS'frames'
+p61
+(lp62
+(dp63
+S'file'
+p64
+S'/home/www-data/web2py/gluon/restricted.py'
+p65
+sS'dump'
+p66
+(dp67
+S'environment'
+p68
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'Affine2D': <class 'matplotlib.transforms.Affine2D'>, 'AppConfig': <function AppConfig>, 'Artist': <class 'matplotlib.artist.Artist'>, 'Auth': <class 'gluon.tools.Auth'>, 'Axes': <class 'matplotlib.axes._axes.Axes'>, 'AxesStack': <class 'matplotlib.figure.AxesStack'>, 'B': <class 'gluon.html.B'>, ...}"
+p69
+sS'ccode'
+p70
+S'<code object <module> at 0x7f85d6f3f8b0, file "/...ade_Ambiental/controllers/plotdados.py", line 26>'
+p71
+ssS'lnum'
+p72
+I219
+sS'lines'
+p73
+(dp74
+I214
+S'    if environment is None:'
+p75
+sI215
+S'        environment = {}'
+p76
+sI216
+S"    environment['__file__'] = layer"
+p77
+sI217
+S"    environment['__name__'] = '__restricted__'"
+p78
+sI218
+S'    try:'
+p79
+sI219
+S'        exec(ccode, environment)'
+p80
+sI220
+S'    except HTTP:'
+p81
+sI221
+S'        raise'
+p82
+sI222
+S'    except RestrictedError:'
+p83
+sI223
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p84
+ssS'call'
+p85
+S'(ccode=<code object <module> at 0x7f85d6f3f8b0, file "/...ade_Ambiental/controllers/plotdados.py", line 26>, environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'ASSIGNJS\': <function ASSIGNJS>, \'Affine2D\': <class \'matplotlib.transforms.Affine2D\'>, \'AppConfig\': <function AppConfig>, \'Artist\': <class \'matplotlib.artist.Artist\'>, \'Auth\': <class \'gluon.tools.Auth\'>, \'Axes\': <class \'matplotlib.axes._axes.Axes\'>, \'AxesStack\': <class \'matplotlib.figure.AxesStack\'>, \'B\': <class \'gluon.html.B\'>, ...}, layer=\'/home/www-data/web2py/applications/Qualidade_Ambiental/controllers/plotdados.py\', scode=<code object <module> at 0x7f85d6f3f8b0, file "/...ade_Ambiental/controllers/plotdados.py", line 26>)'
+p86
+sS'func'
+p87
+S'restricted'
+p88
+sa(dp89
+g64
+S'/home/www-data/web2py/applications/Qualidade_Ambiental/controllers/plotdados.py'
+p90
+sg66
+(dp91
+sg72
+I122
+sg73
+(dp92
+I112
+S'\tfor i in query:'
+p93
+sI113
+S"\t\tx.append(i['Atividade'].replace('Ponto de Apoio - ','')) #.encode('utf-8'))"
+p94
+sI114
+S'\t\tfor k,v in i.items():'
+p95
+sI115
+S"\t\t\tif k != 'Atividade':"
+p96
+sI116
+S'\t\t\t\tif v != None:'
+p97
+sI117
+S'\t\t\t\t\ty.append(v)'
+p98
+sI118
+S'\tfor i in zip(x,y):'
+p99
+sI119
+S'\t\tlxy.append(i)'
+p100
+sI120
+S'\tlegendgrau = 340'
+p101
+sI121
+S"\treturn plot( title=title, xlab=xlab, ylab=ylab,  mode='bar', data={u'Volume por P.A.': lxy}, legendgrau=legendgrau)"
+p102
+ssg85
+S'()'
+p103
+sg87
+S'<module>'
+p104
+sa(dp105
+g64
+S'/home/www-data/web2py/gluon/globals.py'
+p106
+sg66
+(dp107
+S'self'
+p108
+S'undefined'
+p109
+sS'f'
+S'<function pontores>'
+p110
+ssg72
+I421
+sg73
+(dp111
+I416
+S"        self.flash = ''            # used by the default view layout"
+p112
+sI417
+S'        self.meta = Storage()      # used by web2py_ajax.html'
+p113
+sI418
+S'        self.menu = []             # used by the default view layout'
+p114
+sI419
+S'        self.files = []            # used by web2py_ajax.html'
+p115
+sI420
+S'        self._vars = None'
+p116
+sI421
+S'        self._caller = lambda f: f()'
+p117
+sI422
+S'        self._view_environment = None'
+p118
+sI423
+S'        self._custom_commit = None'
+p119
+sI424
+S'        self._custom_rollback = None'
+p120
+sI425
+S"        self.generic_patterns = ['*']"
+p121
+ssg85
+S'(f=<function pontores>)'
+p122
+sg87
+S'<lambda>'
+p123
+sa(dp124
+g64
+S'/home/www-data/web2py/applications/Qualidade_Ambiental/controllers/plotdados.py'
+p125
+sg66
+(dp126
+S'xlab'
+p127
+S"u'res\\xedduos'"
+p128
+sS'title'
+p129
+S"u'Volume total por res\\xedduos no None'"
+p130
+sS'legendgrau'
+p131
+S'315'
+p132
+sS'global plot'
+p133
+S'<function plot>'
+p134
+sS'lxy'
+p135
+S"[('Plast.Papel', None), ('Poda', None), ('Ferro', None), ('Eletron.', None), ('Moveis', None), ('Entulho', None)]"
+p136
+sS'mode'
+p137
+g109
+sS'ylab'
+p138
+S"u'Vol. em metros c\\xfabicos (m3)'"
+p139
+sS'data'
+p140
+g109
+ssg72
+I85
+sg73
+(dp141
+I80
+S'\t\ty.append(v)'
+p142
+sI81
+S'\tlxy = []'
+p143
+sI82
+S'\tfor i in zip(x,y):'
+p144
+sI83
+S'\t\tlxy.append(i)'
+p145
+sI84
+S'\tlegendgrau = 315'
+p146
+sI85
+S"\treturn plot( title=title, xlab=xlab, ylab=ylab,  mode='bar', data={u'Volume por res\xc3\xadduo': lxy}, legendgrau=legendgrau)"
+p147
+sI86
+S''
+sI87
+S''
+sI88
+S'def respontos(): # Grafico do volume por ponto do res\xc3\xadduo selecionado'
+p148
+sI89
+S''
+ssg85
+S'()'
+p149
+sg87
+S'pontores'
+p150
+sa(dp151
+g64
+S'/home/www-data/web2py/applications/Qualidade_Ambiental/modules/plotador.py'
+p152
+sg66
+(dp153
+S'ax.bar'
+p154
+S'<bound method AxesSubplot.bar of <matplotlib.axes._subplots.AxesSubplot object>>'
+p155
+sS'builtinrange'
+p156
+S'<built-in function range>'
+p157
+sS'ell'
+p158
+g109
+sS'builtinlen'
+p159
+S'<built-in function len>'
+p160
+sS'y'
+S'[None, None, None, None, None, None]'
+p161
+sS'ax'
+p162
+S'<matplotlib.axes._subplots.AxesSubplot object>'
+p163
+ssg72
+I47
+sg73
+(dp164
+I42
+S'        (x,y)=([],[])'
+p165
+sI43
+S'        for point in stream:'
+p166
+sI44
+S'            x.append(point[0])'
+p167
+sI45
+S'            y.append(point[1])'
+p168
+sI46
+S"        if mode=='bar':"
+p169
+sI47
+S'            ell = ax.bar(range(len(y)), y)'
+p170
+sI48
+S'            ell.set_label(x)'
+p171
+sI49
+S'            ax.set_xticks(range(len(y)))'
+p172
+sI50
+S'            ax.set_xticklabels(x)'
+p173
+sI51
+S'            legend.append((ell,key))'
+p174
+ssg85
+S"(title=u'Volume total por res\\xedduos no None', xlab=u'res\\xedduos', ylab=u'Vol. em metros c\\xfabicos (m3)', mode='bar', data={u'Volume por res\\xedduo': [('Plast.Papel', None), ('Poda', None), ('Ferro', None), ('Eletron.', None), ('Moveis', None), ('Entulho', None)]}, legendgrau=315)"
+p175
+sg87
+S'plot'
+p176
+sa(dp177
+g64
+S'/usr/lib/python2.7/dist-packages/matplotlib/__init__.py'
+p178
+sg66
+(dp179
+S'ax'
+p180
+S'<matplotlib.axes._subplots.AxesSubplot object>'
+p181
+sS'args'
+p182
+S'([0, 1, 2, 3, 4, 5], [None, None, None, None, None, None])'
+p183
+sS'func'
+p184
+S'<function bar>'
+p185
+sS'kwargs'
+p186
+g19
+ssg72
+I1718
+sg73
+(dp187
+I1713
+S'                           "func \'%s\' but couldn\'t find such an argument. \\n"'
+p188
+sI1714
+S'                           "(This is a programming error, please report to "'
+p189
+sI1715
+S'                           "the matplotlib list!)")'
+p190
+sI1716
+S'                    warnings.warn(msg % (label_namer, func.__name__),'
+p191
+sI1717
+S'                                  RuntimeWarning, stacklevel=2)'
+p192
+sI1718
+S'            return func(ax, *args, **kwargs)'
+p193
+sI1719
+S'        pre_doc = inner.__doc__'
+p194
+sI1720
+S'        if pre_doc is None:'
+p195
+sI1721
+S"            pre_doc = ''"
+p196
+sI1722
+S'        else:'
+p197
+ssg85
+S'(ax=<matplotlib.axes._subplots.AxesSubplot object>, *args=([0, 1, 2, 3, 4, 5], [None, None, None, None, None, None]), **kwargs={})'
+p198
+sg87
+S'inner'
+p199
+sa(dp200
+g64
+S'/usr/lib/python2.7/dist-packages/matplotlib/axes/_axes.py'
+p201
+sg66
+(dp202
+S'self'
+p203
+S'<matplotlib.axes._subplots.AxesSubplot object>'
+p204
+sS'r'
+S'<matplotlib.patches.Rectangle object>'
+p205
+sS'self.add_patch'
+p206
+S'<bound method AxesSubplot.add_patch of <matplotlib.axes._subplots.AxesSubplot object>>'
+p207
+ssg72
+I2095
+sg73
+(dp208
+I2090
+S'            r.get_path()._interpolation_steps = 100'
+p209
+sI2091
+S"            if orientation == 'vertical':"
+p210
+sI2092
+S'                r.sticky_edges.y.append(b)'
+p211
+sI2093
+S"            elif orientation == 'horizontal':"
+p212
+sI2094
+S'                r.sticky_edges.x.append(l)'
+p213
+sI2095
+S'            self.add_patch(r)'
+p214
+sI2096
+S'            patches.append(r)'
+p215
+sI2097
+S''
+sI2098
+S'        holdstate = self._hold'
+p216
+sI2099
+S'        self._hold = True  # ensure hold is on before plotting errorbars'
+p217
+ssg85
+S'(self=<matplotlib.axes._subplots.AxesSubplot object>, *args=<itertools.izip object>, **kwargs={})'
+p218
+sg87
+S'bar'
+p219
+sa(dp220
+g64
+S'/usr/lib/python2.7/dist-packages/matplotlib/axes/_base.py'
+p221
+sg66
+(dp222
+S'p'
+S'<matplotlib.patches.Rectangle object>'
+p223
+sS'self'
+p224
+S'<matplotlib.axes._subplots.AxesSubplot object>'
+p225
+sS'self._update_patch_limits'
+p226
+S'<bound method AxesSubplot._update_patch_limits of <matplotlib.axes._subplots.AxesSubplot object>>'
+p227
+ssg72
+I1854
+sg73
+(dp228
+I1856
+S'        p._remove_method = lambda h: self.patches.remove(h)'
+p229
+sI1857
+S'        return p'
+p230
+sI1858
+S''
+sI1849
+S'        """'
+p231
+sI1850
+S''
+sI1851
+S'        self._set_artist_props(p)'
+p232
+sI1852
+S'        if p.get_clip_path() is None:'
+p233
+sI1853
+S'            p.set_clip_path(self.patch)'
+p234
+sI1854
+S'        self._update_patch_limits(p)'
+p235
+sI1855
+S'        self.patches.append(p)'
+p236
+ssg85
+S'(self=<matplotlib.axes._subplots.AxesSubplot object>, p=<matplotlib.patches.Rectangle object>)'
+p237
+sg87
+S'add_patch'
+p238
+sa(dp239
+g64
+S'/usr/lib/python2.7/dist-packages/matplotlib/axes/_base.py'
+p240
+sg66
+(dp241
+S').transform'
+p242
+g109
+sS'xys'
+p243
+g109
+sS'patch.get_patch_transform'
+p244
+S'<bound method Rectangle.get_patch_transform of <matplotlib.patches.Rectangle object>>'
+p245
+sS'vertices'
+p246
+S'array([[ 0.,  0.],\n       [ 1.,  0.],\n       [ 1.,  1.],\n       [ 0.,  1.],\n       [ 0.,  0.]])'
+p247
+sS'patch'
+p248
+S'<matplotlib.patches.Rectangle object>'
+p249
+ssg72
+I1874
+sg73
+(dp250
+I1869
+S'        if (isinstance(patch, mpatches.Rectangle) and'
+p251
+sI1870
+S'                ((not patch.get_width()) and (not patch.get_height()))):'
+p252
+sI1871
+S'            return'
+p253
+sI1872
+S'        vertices = patch.get_path().vertices'
+p254
+sI1873
+S'        if vertices.size > 0:'
+p255
+sI1874
+S'            xys = patch.get_patch_transform().transform(vertices)'
+p256
+sI1875
+S'            if patch.get_data_transform() != self.transData:'
+p257
+sI1876
+S'                patch_to_data = (patch.get_data_transform() -'
+p258
+sI1877
+S'                                 self.transData)'
+p259
+sI1878
+S'                xys = patch_to_data.transform(xys)'
+p260
+ssg85
+S'(self=<matplotlib.axes._subplots.AxesSubplot object>, patch=<matplotlib.patches.Rectangle object>)'
+p261
+sg87
+S'_update_patch_limits'
+p262
+sa(dp263
+g64
+S'/usr/lib/python2.7/dist-packages/matplotlib/patches.py'
+p264
+sg66
+(dp265
+S'self'
+p266
+S'<matplotlib.patches.Rectangle object>'
+p267
+sS'self._update_patch_transform'
+p268
+S'<bound method Rectangle._update_patch_transform of <matplotlib.patches.Rectangle object>>'
+p269
+ssg72
+I692
+sg73
+(dp270
+I687
+S'        rot_trans.rotate_deg_around(x, y, self.angle)'
+p271
+sI688
+S'        self._rect_transform = transforms.BboxTransformTo(bbox)'
+p272
+sI689
+S'        self._rect_transform += rot_trans'
+p273
+sI690
+S''
+sI691
+S'    def get_patch_transform(self):'
+p274
+sI692
+S'        self._update_patch_transform()'
+p275
+sI693
+S'        return self._rect_transform'
+p276
+sI694
+S''
+sI695
+S'    def get_x(self):'
+p277
+sI696
+S'        "Return the left coord of the rectangle"'
+p278
+ssg85
+S'(self=<matplotlib.patches.Rectangle object>)'
+p279
+sg87
+S'get_patch_transform'
+p280
+sa(dp281
+g64
+S'/usr/lib/python2.7/dist-packages/matplotlib/patches.py'
+p282
+sg66
+(dp283
+S'height'
+p284
+S'None'
+p285
+sS'width'
+p286
+S'0.80000000000000004'
+p287
+sS'bbox'
+p288
+g109
+sS'x'
+S'-0.40000000000000002'
+p289
+sS'y'
+S'0'
+sS'global transforms'
+p290
+S"<module 'matplotlib.transforms' from '/usr/lib/python2.7/dist-packages/matplotlib/transforms.pyc'>"
+p291
+sS'transforms.Bbox.from_bounds'
+p292
+S'<function from_bounds>'
+p293
+sS'transforms.Bbox'
+p294
+S"<class 'matplotlib.transforms.Bbox'>"
+p295
+ssg72
+I685
+sg73
+(dp296
+I680
+S'        """'
+p297
+sI681
+S'        x = self.convert_xunits(self._x)'
+p298
+sI682
+S'        y = self.convert_yunits(self._y)'
+p299
+sI683
+S'        width = self.convert_xunits(self._width)'
+p300
+sI684
+S'        height = self.convert_yunits(self._height)'
+p301
+sI685
+S'        bbox = transforms.Bbox.from_bounds(x, y, width, height)'
+p302
+sI686
+S'        rot_trans = transforms.Affine2D()'
+p303
+sI687
+S'        rot_trans.rotate_deg_around(x, y, self.angle)'
+p304
+sI688
+S'        self._rect_transform = transforms.BboxTransformTo(bbox)'
+p305
+sI689
+S'        self._rect_transform += rot_trans'
+p306
+ssg85
+S'(self=<matplotlib.patches.Rectangle object>)'
+p307
+sg87
+S'_update_patch_transform'
+p308
+sa(dp309
+g64
+S'/usr/lib/python2.7/dist-packages/matplotlib/transforms.py'
+p310
+sg66
+(dp311
+S'height'
+p312
+S'None'
+p313
+sS'width'
+p314
+S'0.80000000000000004'
+p315
+sS'Bbox.from_extents'
+p316
+S'<function from_extents>'
+p317
+sS'y0'
+p318
+S'0'
+sS'x0'
+p319
+S'-0.40000000000000002'
+p320
+sS'global Bbox'
+p321
+S"<class 'matplotlib.transforms.Bbox'>"
+p322
+ssg72
+I804
+sg73
+(dp323
+I800
+S'        *width* and *height*.'
+p324
+sI801
+S''
+sI802
+S'        *width* and *height* may be negative.'
+p325
+sI803
+S'        """'
+p326
+sI804
+S'        return Bbox.from_extents(x0, y0, x0 + width, y0 + height)'
+p327
+sI805
+S''
+sI806
+S'    @staticmethod'
+p328
+sI807
+S'    def from_extents(*args):'
+p329
+sI808
+S'        """'
+p330
+sI799
+S'        (staticmethod) Create a new :class:`Bbox` from *x0*, *y0*,'
+p331
+ssg85
+S'(x0=-0.40000000000000002, y0=0, width=0.80000000000000004, height=None)'
+p332
+sg87
+S'from_bounds'
+p333
+sasS'pyver'
+p334
+S'Python 2.7.15+: /usr/local/bin/uwsgi (prefix: /usr)'
+p335
+sS'session'
+p336
+g59
+(S's\x1a\x00\x00\x00<div><table></table></div>'
+tRp337
+sS'etype'
+p338
+S"<type 'exceptions.TypeError'>"
+p339
+sS'date'
+p340
+S'Mon Dec 16 08:36:14 2019'
+p341
+sS'response'
+p342
+g59
+(S's_@\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x7f85d6cd4c70&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_qualidade_ambiental</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-3220a474-40cc-4adc-b8f4-e61d0663bb51<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">samesite</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>bootstrap4_inline</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">Content-Type</td><td style="vertical-align:top;">:</td><td><div>image/png</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Principal</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/Qualidade_Ambiental/default/index.png</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Meus sites</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/site.png</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Esta aplica\xc3\xa7\xc3\xa3o</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Design</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/design.png/Qualidade_Ambiental</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Controlador</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit.png/Qualidade_Ambiental/controllers/plotdados.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Visualiza\xc3\xa7\xc3\xa3o</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit.png/Qualidade_Ambiental/views/plotdados/pontores.png</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Modelo BD</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit.png/Qualidade_Ambiental/models/db.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Modelo de Menu</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit.png/Qualidade_Ambiental/models/menu.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Config.ini</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit.png/Qualidade_Ambiental/private/appconfig.ini</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Layout</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit.png/Qualidade_Ambiental/views/layout.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Folha de estilo</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit.png/Qualidade_Ambiental/static/css/web2py-bootstrap3.css</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>banco de dados</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/Qualidade_Ambiental/appadmin/index.png</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Erros</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/errors.png/Qualidade_Ambiental</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Sobre</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/about.png/Qualidade_Ambiental</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>web2py.com</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Download</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/download</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Suporte</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/support</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Demo</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/demo_admin</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Exemplos r\xc3\xa1pidos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/examples/default/examples</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Perguntas frequentes</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/AlterEgo</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>V\xc3\xaddeos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/videos/</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Aplica\xc3\xa7\xc3\xb5es gratuitas</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/appliances</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/plugins</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Receitas</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2pyslices.com/</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Documenta\xc3\xa7\xc3\xa3o</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Online book</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Pref\xc3\xa1cio</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/00</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Introdu\xc3\xa7\xc3\xa3o</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/01</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Python</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/02</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Vis\xc3\xa3o Geral</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/03</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>The Core</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/04</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>As views</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/05</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>banco de dados</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/06</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Formul\xc3\xa1rios e Validadores</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/07</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Email e SMS</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/08</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Controle de Acesso</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/09</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Servi\xc3\xa7o</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/10</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Receitas de Ajax</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/11</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Componentes e Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/12</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Receitas de deploy</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/13</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Outras Receitas</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/14</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Helping web2py</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/15</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Compre o livro do web2py</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://stores.lulu.com/web2py</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Comunidade</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Grupos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/usergroups</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Twitter</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://twitter.com/web2py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Chat ao vivo</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://webchat.freenode.net/?channels=web2py</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Carlos A Locatelli Jr &lt;call.jmail@gmail.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>Sistema Python Web2py e Banco Mysql Desenvolvido para gest\xc3\xa3o da SMAURB</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>web2py</div></td></tr><tr><td><div>python</div></td></tr><tr><td><div>framework</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^plotdados/\\w+\\.py$</div></td></tr><tr><td><div>^plotdados/pontores/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_qualidade_ambiental</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;/home/www-data/web2py/applications/Qualidade_Ambiental/sessions/087/05c/127.0.0.1-3220a474-40cc-4adc-b8f4-e61d0663bb51&#x27;, mode &#x27;rb+&#x27; at 0x7f85d6f9d8a0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>/home/www-data/web2py/applications/Qualidade_Ambiental/sessions/127.0.0.1-3220a474-40cc-4adc-b8f4-e61d0663bb51</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>ff11d8730cdf4a5fc5eada7f70e3592c</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-3220a474-40cc-4adc-b8f4-e61d0663bb51</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_qualidade_ambiental</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_locked</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>Qualidade_Ambiental</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">show_toolbar</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>plotdados/pontores.png</div></td></tr></table></div>'
+tRp343
+sS'locals'
+p344
+(dp345
+S'width'
+p346
+S'0.80000000000000004'
+p347
+sS'x0'
+p348
+S'-0.40000000000000002'
+p349
+sS'height'
+p350
+S'None'
+p351
+sS'y0'
+p352
+S'0'
+sssS'traceback'
+p353
+S'Traceback (most recent call last):\n  File "/home/www-data/web2py/gluon/restricted.py", line 219, in restricted\n    exec(ccode, environment)\n  File "/home/www-data/web2py/applications/Qualidade_Ambiental/controllers/plotdados.py", line 122, in <module>\n  File "/home/www-data/web2py/gluon/globals.py", line 421, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/www-data/web2py/applications/Qualidade_Ambiental/controllers/plotdados.py", line 85, in pontores\n    return plot( title=title, xlab=xlab, ylab=ylab,  mode=\'bar\', data={u\'Volume por res\xc3\xadduo\': lxy}, legendgrau=legendgrau)\n  File "applications/Qualidade_Ambiental/modules/plotador.py", line 47, in plot\n    ell = ax.bar(range(len(y)), y)\n  File "/usr/lib/python2.7/dist-packages/matplotlib/__init__.py", line 1718, in inner\n    return func(ax, *args, **kwargs)\n  File "/usr/lib/python2.7/dist-packages/matplotlib/axes/_axes.py", line 2095, in bar\n    self.add_patch(r)\n  File "/usr/lib/python2.7/dist-packages/matplotlib/axes/_base.py", line 1854, in add_patch\n    self._update_patch_limits(p)\n  File "/usr/lib/python2.7/dist-packages/matplotlib/axes/_base.py", line 1874, in _update_patch_limits\n    xys = patch.get_patch_transform().transform(vertices)\n  File "/usr/lib/python2.7/dist-packages/matplotlib/patches.py", line 692, in get_patch_transform\n    self._update_patch_transform()\n  File "/usr/lib/python2.7/dist-packages/matplotlib/patches.py", line 685, in _update_patch_transform\n    bbox = transforms.Bbox.from_bounds(x, y, width, height)\n  File "/usr/lib/python2.7/dist-packages/matplotlib/transforms.py", line 804, in from_bounds\n    return Bbox.from_extents(x0, y0, x0 + width, y0 + height)\nTypeError: unsupported operand type(s) for +: \'int\' and \'NoneType\'\n'
+p354
+s.
