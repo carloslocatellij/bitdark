@@ -140,12 +140,21 @@ def FormEntradaPonto():
 		for k in session.campospersits:
 			db['EntradaPonto'][k].default = session.campospersits[k]
 		form = SQLFORM( db.EntradaPonto ,formstyle='table3cols', editable=True)
+		#form.Placa.upper()
 
 	else:
 		form = SQLFORM( db.EntradaPonto ,formstyle='table3cols', editable=True)
 
+
 	if form.process().accepted:
-		response.flash = 'REGISTRADO! \n\n  {} ,  {} ,  {}'.format(request.vars.Placa, request.vars.Data, request.vars.Volume)
+		itenresiduo = []
+		for k, v in request.vars.items():
+			if v == 'on':
+				itenresiduo.append(k)
+			if k == 'Outros' and v != None:
+				itenresiduo.append(v)
+
+		response.flash = 'REGISTRADO! \t - {} ,  {} ,  {}m³, {} '.format(request.vars.Placa, request.vars.Data, request.vars.Volume, str(itenresiduo))
 		session.campospersits={'IdPonto':form.vars.IdPonto,'Data':form.vars.Data}
 		#redirect(URL('FormEntradaPonto', args=form.vars.id))
 	elif form.errors:

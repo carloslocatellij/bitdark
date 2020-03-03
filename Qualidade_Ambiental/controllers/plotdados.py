@@ -97,10 +97,12 @@ def respontos(): # Grafico do volume por ponto do resíduo selecionado
 		query = db.executesql("SELECT `UnidadeDestino`.`Atividade`, SUM( ( `Volume` * `Ferro` ) / ( `Moveis` + `Ferro` + `Entulho` + `PlastPapel` + `Eletron` + `Poda` ) ) AS `Ferro` FROM `UnidadeDestino`, `EntradaPonto`  WHERE `UnidadeDestino`.`Id` = `EntradaPonto`.`IdPonto` AND `EntradaPonto`.`Data` BETWEEN '{}' AND '{}' GROUP BY `EntradaPonto`.`IdPonto`".format(session.Inicio,session.Fim), as_dict=True)
 	elif session.Residuo == 'Plastico/ Papel':
 		query = db.executesql("SELECT `UnidadeDestino`.`Atividade`, SUM( ( `Volume` * `PlastPapel` ) / ( `Moveis` + `Ferro` + `Entulho` + `PlastPapel` + `Eletron` + `Poda` ) ) AS `Plast.Papel`FROM `UnidadeDestino`, `EntradaPonto`  WHERE `UnidadeDestino`.`Id` = `EntradaPonto`.`IdPonto` AND `EntradaPonto`.`Data` BETWEEN '{}' AND '{}' GROUP BY `EntradaPonto`.`IdPonto`".format(session.Inicio,session.Fim), as_dict=True) 
-	elif session.Residuo == 'Eletroico':
+	elif session.Residuo == 'Eletronico':
 		query = db.executesql("SELECT `UnidadeDestino`.`Atividade`, SUM( ( `Volume` * `Eletron` ) / ( `Moveis` + `Ferro` + `Entulho` + `PlastPapel` + `Eletron` + `Poda` ) ) AS `Eletron.` FROM `UnidadeDestino`, `EntradaPonto`  WHERE `UnidadeDestino`.`Id` = `EntradaPonto`.`IdPonto` AND `EntradaPonto`.`Data` BETWEEN '{}' AND '{}' GROUP BY `EntradaPonto`.`IdPonto`".format(session.Inicio,session.Fim), as_dict=True)
-	else:
+	elif session.Residuo ==  'Volume total':
 		query = db.executesql("SELECT `UnidadeDestino`.`Atividade`, SUM(`Volume`) FROM `UnidadeDestino`, `EntradaPonto`  WHERE `UnidadeDestino`.`Id` = `EntradaPonto`.`IdPonto` AND `EntradaPonto`.`Data` BETWEEN '{}' AND '{}' GROUP BY `EntradaPonto`.`IdPonto`".format(session.Inicio,session.Fim), as_dict=True)
+	else:
+		query = 'Erro no parametro'
 
 	response.headers['Content-Type']='image/png'
 	ylab = u'Vol. em metros cúbicos (m3)'
