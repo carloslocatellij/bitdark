@@ -95,10 +95,11 @@ auth = Auth(db, host_names=configuration.get('host.names'))
 # -------------------------------------------------------------------------
 # create all tables needed by auth, maybe add a list of extra fields
 # -------------------------------------------------------------------------
-#from validador import IS_CPF
-#auth.settings.extra_fields['auth_user'] = [
-#Field('Idm', 'integer'),
-#Field('CPF', 'text', requires=IS_CPF())]
+from validador import IS_CPF
+auth.settings.extra_fields['auth_user'] = [
+    Field('IdDepto', 'integer'),
+    Field('CPF', 'text', requires=IS_CPF())]
+
 auth.define_tables(username=False, signature=False)
 
 # -------------------------------------------------------------------------

@@ -282,3 +282,11 @@ GitHub.sublime-settings
 /errors/
 /errors/*
 */errors/
+/sessions/
+/cache/
+*/sessions/
+*/cache/
+
+admin/
+welcome/
+MeioAmbienteRP/

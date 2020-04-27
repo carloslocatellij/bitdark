@@ -43,7 +43,7 @@ Estoque = dbentidades.define_table('Estoque',
 dbentidades.Estoque.Id.writable = dbentidades.Estoque.Id.readable = False
 
 
-Predios = dbentidades.define_table ('Predios',
+Predios = db.define_table ('Predios',
 	Field('Id', 'id'),
 	Field('Predio', 'text', length=75, required=True),
 	Field('CodEnergia', 'integer'),
@@ -52,16 +52,28 @@ Predios = dbentidades.define_table ('Predios',
 	format = '%(Predio)s',
 	migrate = False)
 
-dbentidades.Predios.Id.writable = dbentidades.Predios.Id.readable = False
+db.Predios.Id.writable = db.Predios.Id.readable = False
 
-Dpto = dbentidades.define_table('Dpto', 
-	Field('Departamento', 'text', required=True),
+Dpto = db.define_table('Dpto', 
+	Field('Departamento', 'string', required=True),
 	Field('Idm', 'integer'),
-	Field('Orgao', 'reference Dpto' ),
-	Field('Telefone', 'text'),
+	Field('Orgao', 'reference Dpto',  ),
+	Field('Telefone', 'string'),
 	primarykey= ['Idm'], 
 	format='%(Departamento)s',
 	migrate=False)
+
+db.Dpto.Orgao.requires=IS_IN_DB(db, 'Dpto.Idm', db.Dpto._format)
+#Campos Obrigatório para Pessoas
+
+
+UserDpto = db.define_table('UserDpto',
+	Field('id','id'),
+	Field('IdUser', 'integer'),
+	Field('IdDepto', 'integer'),
+	
+	)
+
 
 #BANCO A3P
 
@@ -87,7 +99,7 @@ ContasAgua = dbentidades.define_table ('ContasAgua',
 
 A3pLixos = dbentidades.define_table('A3pLixos', 
 	Field('Id', 'id'),
-	Field('IdPredio', 'integer', requires=IS_IN_DB(dbentidades, 'Predios.Id', dbentidades.Predios._format)),
+	Field('IdPredio', 'integer', requires=IS_IN_DB(dbentidades, 'Predios.Id', db.Predios._format)),
 	Field('Data', 'date'),
 	Field('Tipo', 'list:text', requires=IS_IN_SET(['Rec','Org'])),
 	Field('Qtd', 'decimal(7,2)'),

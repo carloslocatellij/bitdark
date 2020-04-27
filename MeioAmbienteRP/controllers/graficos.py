@@ -25,7 +25,7 @@ def return_data():
     #queryEnegIdm = db((db.ContasEnergia.CodCPFL == db.Predios.CodEnergia) & (db.ContasEnergia.Mes >= '2017/01/01' ) ).iterselect(db.ContasEnergia.CodCPFL, db.ContasEnergia.Mes, db.ContasEnergia.Kwh)
 
     if session.selectgraf == 'Energia':
-        rows = dbentidades(((dbentidades.ContasEnergia.CodCPFL == dbentidades.Predios.CodEnergia) & (dbentidades.Predios.Id == session.IdPredio)) & (dbentidades.ContasEnergia.Mes >= session.slcAno+'/01/01') & (dbentidades.ContasEnergia.Mes <= session.slcAno+'/12/01' ) ).iterselect(dbentidades.ContasEnergia.CodCPFL, dbentidades.ContasEnergia.Mes, dbentidades.ContasEnergia.Kwh)
+        rows = dbentidades(((dbentidades.ContasEnergia.CodCPFL == db.Predios.CodEnergia) & (db.Predios.Id == session.IdPredio)) & (dbentidades.ContasEnergia.Mes >= session.slcAno+'/01/01') & (dbentidades.ContasEnergia.Mes <= session.slcAno+'/12/01' ) ).iterselect(dbentidades.ContasEnergia.CodCPFL, dbentidades.ContasEnergia.Mes, dbentidades.ContasEnergia.Kwh)
         data = [['Mes', 'Kwh']]
         rlist = []
         for row in rows:
@@ -39,7 +39,7 @@ def return_data():
             data.append(rlist)
             rlist = []   
     elif session.selectgraf == 'Água' :
-        rows = dbentidades(((dbentidades.ContasAgua.CodSemae == dbentidades.Predios.CodAgua) & (dbentidades.Predios.Id == session.IdPredio)) & (dbentidades.ContasAgua.Data >= session.slcAno+'/01/01' ) & (dbentidades.ContasAgua.Data <= session.slcAno+'/12/01' )  ).iterselect(dbentidades.ContasAgua.CodSemae, dbentidades.ContasAgua.Data, dbentidades.ContasAgua.Consumo)
+        rows = dbentidades(((dbentidades.ContasAgua.CodSemae == db.Predios.CodAgua) & (db.Predios.Id == session.IdPredio)) & (dbentidades.ContasAgua.Data >= session.slcAno+'/01/01' ) & (dbentidades.ContasAgua.Data <= session.slcAno+'/12/01' )  ).iterselect(dbentidades.ContasAgua.CodSemae, dbentidades.ContasAgua.Data, dbentidades.ContasAgua.Consumo)
         data = [['Mes', 'Consumo']]
         rlist = []
         for row in rows:
@@ -76,13 +76,13 @@ def plotA3P():
     ano = session.slcAno
     #if session.IdPredio ==
     if session.selectgraf == 'Energia':
-        rdata = dbentidades(((dbentidades.ContasEnergia.CodCPFL == dbentidades.Predios.CodEnergia) & (dbentidades.Predios.Id == session.IdPredio)) & (dbentidades.ContasEnergia.Mes >= session.slcAno+'/01/01') & (dbentidades.ContasEnergia.Mes <= session.slcAno+'/12/01' ) )
+        rdata = dbentidades(((dbentidades.ContasEnergia.CodCPFL == db.Predios.CodEnergia) & (db.Predios.Id == session.IdPredio)) & (dbentidades.ContasEnergia.Mes >= session.slcAno+'/01/01') & (dbentidades.ContasEnergia.Mes <= session.slcAno+'/12/01' ) )
         ramo = 'Consumo de Energia '
         tipograf = 'line'
         fields = [dbentidades.ContasEnergia.Mes, dbentidades.ContasEnergia.Kwh, dbentidades.ContasEnergia.Valor]
         
     elif session.selectgraf == 'Água':
-        rdata = dbentidades(((dbentidades.ContasAgua.CodSemae == dbentidades.Predios.CodAgua) & (dbentidades.Predios.Id == session.IdPredio)) & (dbentidades.ContasAgua.Data >= session.slcAno+'/01/01' ) & (dbentidades.ContasAgua.Data <= session.slcAno+'/12/01' )  )
+        rdata = dbentidades(((dbentidades.ContasAgua.CodSemae == db.Predios.CodAgua) & (db.Predios.Id == session.IdPredio)) & (dbentidades.ContasAgua.Data >= session.slcAno+'/01/01' ) & (dbentidades.ContasAgua.Data <= session.slcAno+'/12/01' )  )
         ramo = 'Consumo de Água '
         tipograf = 'line'
         fields = [dbentidades.ContasAgua.Data, dbentidades.ContasAgua.Consumo, dbentidades.ContasAgua.Valor]
@@ -97,7 +97,7 @@ def plotA3P():
         tipograf = 'bar'
    
 
-    predio_p_cod = dbentidades((dbentidades.Predios.Id == session.IdPredio)).select(dbentidades.Predios.Predio)
+    predio_p_cod = dbentidades((db.Predios.Id == session.IdPredio)).select(db.Predios.Predio)
     predio = predio_p_cod[0]['Predio']
     return dict(predio=predio, ramo=ramo, tipograf=tipograf, ano=ano, grade=SQLFORM.grid(rdata, deletable=False,
             editable=False, fields=fields))

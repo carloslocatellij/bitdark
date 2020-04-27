@@ -14,7 +14,7 @@ def index():
 
 @auth.requires_login()
 def FConsultA3P():
-    formConsultA3P = SQLFORM.factory(Field('IdPredio',dbentidades.Predios, requires=IS_IN_DB(dbentidades(dbentidades.Predios.CodDepto == user_dpto[0]['Idm']), 'Predios.Id', '%(Predio)s'), label='Local'),
+    formConsultA3P = SQLFORM.factory(Field('IdPredio',db.Predios, requires=IS_IN_DB(dbentidades(db.Predios.CodDepto == user_dpto[0]['Idm']), 'Predios.Id', '%(Predio)s'), label='Local'),
                                      # Field('selectgraf',label='Segmento A3P',requires=IS_IN_SET(['Energia','Água','Resíduo', 'Recursos'])),
                                      Field('slcAno', label='Ano', requires=IS_IN_SET(['2016','2017','2018','2019'])),
                             table_name='ConsultA3p',
@@ -45,7 +45,7 @@ def FConsultA3P():
 @auth.requires_login()
 def FA3pAgua():
     formA3pAgua = SQLFORM(dbentidades.ContasAgua, submit_button='Registrar', formstyle='divs' )
-    dbentidades.ContasAgua.CodSemae.requires=IS_IN_DB(dbentidades(dbentidades.Predios.CodDepto == user_dpto[0]['Idm']), 'Predios.CodAgua')
+    dbentidades.ContasAgua.CodSemae.requires=IS_IN_DB(dbentidades(db.Predios.CodDepto == user_dpto[0]['Idm']), 'Predios.CodAgua')
     return dict(formA3pAgua=formA3pAgua)
 
 @auth.requires_login()
@@ -121,3 +121,9 @@ def download():
     http://..../[app]/default/download/[filename]
     """
     return response.download(request, db)
+
+def Departamentos():
+    form= SQLFORM(db.Dpto, submit_button='Alterar', formstyle='divs' )
+    
+    return dict(form=form)
+    
