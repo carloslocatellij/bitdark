@@ -41,8 +41,8 @@ def FConsultA3P():
 
 @auth.requires_login()
 def FA3pAgua():
-    formA3pAgua = SQLFORM(db.ContasAgua, submit_button='Enviar')
-    db.ContasAgua.CodSemae.requires=IS_IN_DB(db(db.Predios.CodDepto == user_dpto[0]['IdDepto']), 'Predios.CodAgua')
+    formA3pAgua = SQLFORM(dbentidades.ContasAgua, submit_button='Enviar')
+    dbentidades.ContasAgua.CodSemae.requires=IS_IN_DB(db(db.Predios.CodDepto == user_dpto[0]['IdDepto']), 'Predios.CodAgua')
     return dict(formA3pAgua=formA3pAgua)
 
 
@@ -50,7 +50,7 @@ def FA3pAgua():
 
 
 def Dicas():
-    dicas = db().select(db.A3pDicas.id, db.A3pDicas.Titulo,db.A3pDicas.Tags, orderby=db.A3pDicas.Titulo)
+    dicas = db().select(db.A3pDica.id, db.A3pDica.Titulo,db.A3pDica.Tags, orderby=db.A3pDica.Titulo)
     Rtags = db().select(db.Tags.id, db.Tags.Tag)
     dtag = {}
     combtag = []
@@ -58,7 +58,7 @@ def Dicas():
     for row in range(0 ,len(Rtags)-1):
         combtag = combtag + list((Rtags[row]['Tag'].split()))
     for row in dicas:
-        tagdica = tagdica + list(db.A3pDicas.Tags.represent(row.Tags).split())
+        tagdica = tagdica + list(db.A3pDica.Tags.represent(row.Tags))
     for t in combtag:
         for tt in tagdica:
             if t != tt:
@@ -72,35 +72,35 @@ def Dicas():
 @auth.requires_login()
 def PostaDica():
     """Cria um Post de Dica"""
-    form = SQLFORM(db.A3pDicas).process(next=URL('Dicas'))
+    form = SQLFORM(db.A3pDica).process(next=URL('Dicas'))
     return dict(form=form)
 
 def MostraDica():
     """Mostra dica postada"""
-    dica = db(db.A3pDicas.id==request.args(0, cast=int)).select(A3pDicas.Titulo, A3pDicas.Tags , A3pDicas.body, A3pDicas.created_by ,A3pDicas.created_on ) or redirect(URL('Dicas'))
-#     ntag = db(db.A3pDicas).select(db.A3pDicas.Tags)
+    dica = db(db.A3pDica.id==request.args(0, cast=int)).select(A3pDica.Titulo, A3pDica.Tags , A3pDica.body, A3pDica.created_by ,A3pDica.created_on ) or redirect(URL('Dicas'))
+#     ntag = db(db.A3pDica).select(db.A3pDica.Tags)
     combtag = []
     dtag = {}
     for row in dica:
-            combtag = combtag + list(db.A3pDicas.Tags.represent(row.Tags).split())
+            combtag = combtag + list(db.A3pDica.Tags.represent(row.Tags))
     for t in combtag:
         if t not in dtag:
             dtag[t] = 1
         else:
             dtag[t] = dtag[t] +1
     tg = (dica[0])
-    tags = db.A3pDicas.Tags.represent(tg.Tags).replace(',','')
+    tags = db.A3pDica.Tags.represent(tg.Tags).replace(',','')
     Titulo = dica[0]['Titulo']
     body = dica[0]['body']
-    autor = db.A3pDicas.created_by.represent(dica[0].created_by)
+    autor = db.A3pDica.created_by.represent(dica[0].created_by)
     datapost = dica[0]['created_on']
     return dict(Titulo=Titulo, body=body, autor=autor, datapost=datapost, tags=tags.split(), combtag=combtag ,dtag=dtag)
 
 @auth.requires_login()
 def EditaDica():
     """edita uma dica existente"""
-    this_page = db.A3pDicas(request.args(0, cast=int)) or redirect(URL('Dicas'))
-    form = SQLFORM(db.A3pDicas, this_page, deletable=True).process(
+    this_page = db.A3pDica(request.args(0, cast=int)) or redirect(URL('Dicas'))
+    form = SQLFORM(db.A3pDica, this_page, deletable=True).process(
         next = URL('MostraDica', args=request.args))
     return dict(form=form)
 
@@ -114,15 +114,15 @@ def busca():
 
 def callback():
     """A chamada de procedimento Ajax que returna a <ul> do links para as dicas"""
-    query = db.A3pDicas.Titulo.contains(request.vars.keyword)
-    dicas = db(query).select(orderby=db.A3pDicas.Titulo)
+    query = db.A3pDica.Titulo.contains(request.vars.keyword)
+    dicas = db(query).select(orderby=db.A3pDica.Titulo)
     links = [A(p.Titulo, _href=URL('MostraDica', args=p.id)) for p in dicas]
     return UL(*links)
 
 def noticias():
     """gerador de rss feed do blog"""
     response.generic_patterns = ['.rss']
-    pages = db().select(db.A3pDicas.ALL, orderby=db.A3pDicas.Titulo)
+    pages = db().select(db.A3pDica.ALL, orderby=db.A3pDica.Titulo)
     return dict(title='feed de notícias A3p',
                 link='https://127.0.0.1:8000/MeioAmbienteRP/A3p/Dicas',
                 description='A3p news',

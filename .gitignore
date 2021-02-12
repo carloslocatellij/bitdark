@@ -279,14 +279,16 @@ GitHub.sublime-settings
 # End of https://www.gitignore.io/api/rust,flask,django,python,sublimetext,jupyternotebooks
 
 #Web2py#
-/errors/
-/errors/*
 */errors/
-/sessions/
-/cache/
 */sessions/
-*/cache/
+*cache/
+*/databases/
 
 admin/
 welcome/
-MeioAmbienteRP/
+examples/
+*0db.py
+__init__.pyc
+__pycache__
+*.swp
+appconfig.ini

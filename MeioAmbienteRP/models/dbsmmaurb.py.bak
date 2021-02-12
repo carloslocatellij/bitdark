@@ -270,7 +270,7 @@ DofsObra = dbconstrucoes.define_table('DofsObra',
     Field('IdDof','string', 'primarykey',  ),
     Field('IdObra', 'integer', requires=IS_IN_DB(dbconstrucoes, 'Obras.Id', dbconstrucoes.Obras._format)),
     fake_migrate = 'True',
-    migrate='False'
+    #migrate='True'
     )
 
 

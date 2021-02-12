@@ -36,7 +36,7 @@
 <div align="center"><h2>{{='Relatório por Ponto de Apoio'}}</h2></div>
 <div align="center"><h4>{{='período selecionado: {} até {}'.format(datamin, datamax) }}</h4></div>
 
-{{=XML(DIV(TABLE(THEAD(TR(columns)),TBODY(querysql ), _align='center' ,  _width='85%' , _border='2px')) )}}
+{{=XML(DIV(TABLE(THEAD(TR(columns), _text='bold'),TBODY(querysql ), _align='center' ,  _width='85%' , _border='2px')) )}}
 
 </br> 
 <div align="center"><h3>{{='Soma dos Pontos de Apoio'}}</h3></div>

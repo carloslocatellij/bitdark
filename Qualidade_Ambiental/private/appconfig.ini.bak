@@ -3,9 +3,9 @@
 name        = PMSJRP
 author      = Carlos A Locatelli Jr <call.jmail@gmail.com>
 description = Sistema Python Web2py e Banco Mysql Desenvolvido para gestão da SMAURB
-keywords    = Meio Ambiente, Qualidade Ambiental
+keywords    = web2py, python, framework
 generator   = Web2py Web Framework
-production  = true
+production  = false
 toolbar     = false
 
 ; Host configuration

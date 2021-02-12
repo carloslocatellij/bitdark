@@ -1,6 +1,90 @@
 {{extend 'layout.html'}}
 
+{{extend 'layout.html'}}
 
+<style>
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}    
+</style>
 {{block header}}
 <div class="jumbotron jumbotron-fluid background" style="background-color: #333; color:white; padding:10px;word-wrap:break-word;">
   <div class="container center">
@@ -17,10 +101,25 @@
     </div>
 {{end}}
 
-<div align="center" class="jumbotron jumbotron-fluid" style="padding:10px;word-wrap:break-word"; >
+<div align="left" class="jumbotron jumbotron-fluid" style="padding:10px;word-wrap:break-word"; >
 {{=ctrlplaca}}
-  <h2>{{='Relatório Por Placa'}}</h2>
-{{=XML(DIV(SQLTABLE(grdRelatPlaca, headers='fieldname:capitalize', _textalign='center' ,  _width='85%' , _border='2px',), _align='center'), sanitize=False,permitted_tags=['table'])}}
 </div>
 
-{{=response.toolbar()}}
+<div align="center" class="jumbotron jumbotron-fluid" style="padding:10px;word-wrap:break-word"; >
+
+
+<h2>{{='Relatório Por Placa'}}</h2>
+
+{{if placa:}}
+{{=A('Voltar', _href=URL('PontosApoio', 'relatorio_de_placas'), _class='btn btn-secondary')}}
+
+{{=XML(DIV(SQLTABLE(grdRelatPlaca, _textalign='center' ,  _width='85%' , _border='2px'), _align='center'), sanitize=False,permitted_tags=['table'])}}
+
+{{else:}}
+
+{{=XML(DIV(TABLE(THEAD(TR(columns, _align='center')), TBODY(grdRelatPlaca ), _align='center' ,  _width='85%' , _border='2px')) )}}
+
+{{pass}}
+</div>
+
+{{# =response.toolbar()}}

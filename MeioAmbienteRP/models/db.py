@@ -26,16 +26,19 @@ if request.global_settings.web2py_version < "2.15.5":
 # -------------------------------------------------------------------------
 configuration = AppConfig(reload=True)
 
-Tconect = ('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/Tconect' )
+Tconect = DAL('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/Tconect')
+
+#db = DAL('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/Tconect',  migrate_enabled=True)
 
 
 if not request.env.web2py_runtime_gae:
     # ---------------------------------------------------------------------
     # if NOT running on Google App Engine use SQLite or other DB
     # ---------------------------------------------------------------------
-    db = DAL(Tconect,
+    db = DAL('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/Tconect',
              pool_size=configuration.get('db.pool_size'),
              migrate_enabled=True,
+             #fake_migrate_all=True,
              check_reserved=['mysql'])
 
 else:
@@ -98,15 +101,18 @@ auth = Auth(db, host_names=configuration.get('host.names'))
 from validador import IS_CPF
 auth.settings.extra_fields['auth_user'] = [
     Field('IdDepto', 'integer'),
-    Field('CPF', 'text', requires=IS_CPF())]
+    Field('CPF', 'text', requires=[IS_CPF() , CRYPT()], alias='CPF (será encriptado)'),
+    ]
 
-auth.define_tables(username=False, signature=False)
+
+auth.define_tables(username=True, signature=False
+    )
 
 # -------------------------------------------------------------------------
 # configure email
 # -------------------------------------------------------------------------
 mail = auth.settings.mailer
-mail.settings.server = 'logging' if request.is_local else configuration.get('smtp.server')
+mail.settings.server = configuration.get('smtp.server')
 mail.settings.sender = configuration.get('smtp.sender')
 mail.settings.login = configuration.get('smtp.login')
 mail.settings.tls = configuration.get('smtp.tls') or False
@@ -115,7 +121,7 @@ mail.settings.ssl = configuration.get('smtp.ssl') or False
 # -------------------------------------------------------------------------
 # configure auth policy
 # -------------------------------------------------------------------------
-auth.settings.registration_requires_verification = False
+auth.settings.registration_requires_verification = True
 auth.settings.registration_requires_approval = False
 auth.settings.reset_password_requires_verification = True
 
@@ -161,3 +167,9 @@ if configuration.get('scheduler.enabled'):
 # after defining tables, uncomment below to enable auditing
 # -------------------------------------------------------------------------
 # auth.enable_record_versioning(db)
+
+#RECAPTCHA
+# from gluon.tools import Recaptcha2
+# auth.settings.captcha = Recaptcha2(request,
+#     '6LeRxtoZAAAAAIR7bDieDiw2ik0mQ3kXfmp2gCpj', '6LeRxtoZAAAAAPHus0JCdYT_RJe30yFX-VPZmzfy')
+

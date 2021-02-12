@@ -5,7 +5,11 @@
 # -------------------------------------------------------------------------
 
 # ---- example index page ----
-
+# import numpy as np
+# import matplotlib.pyplot as plt  
+# from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas #plota o grafico em amb externo
+# from matplotlib.figure import *  # plota em figura
+# from io import BytesIO # para transferir o output padrao do grafico para 
 
 def index():
     response.flash = T("Bem Vindo!")
@@ -37,13 +41,13 @@ def wiki():
 def user():
     """
     exposes:
-    http://..../[app]/inicio/user/login
-    http://..../[app]/inicio/user/logout
-    http://..../[app]/inicio/user/register
-    http://..../[app]/inicio/user/profile
-    http://..../[app]/inicio/user/retrieve_password
-    http://..../[app]/inicio/user/change_password
-    http://..../[app]/inicio/user/bulk_register
+    http://..../[app]/default/user/login
+    http://..../[app]/default/user/logout
+    http://..../[app]/default/user/register
+    http://..../[app]/default/user/profile
+    http://..../[app]/default/user/retrieve_password
+    http://..../[app]/default/user/change_password
+    http://..../[app]/default/user/bulk_register
     use @auth.requires_login()
         @auth.requires_membership('group name')
         @auth.requires_permission('read','table name',record_id)
@@ -57,6 +61,6 @@ def user():
 def download():
     """
     allows downloading of uploaded files
-    http://..../[app]/inicio/download/[filename]
+    http://..../[app]/default/download/[filename]
     """
     return response.download(request, db)

@@ -76,7 +76,27 @@ href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" >  Menu  </a> <
                     </li> -->
             </div>
       </ul>
-  </nav>
+    </nav>
+
+    <nav id="sidebar2">
+    <ul class="list-unstyled components">
+       <div class="sidebar-header">
+                    <li class="act">
+           <a class="btn btn-primary dropdown-toggle" type="button" 
+href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" >  DEPARTAMENTOS  </a> <span class="caret"></span> 
+                     </li> 
+        {{=UL(  
+          (A('QUALIDADE AMBIENTAL', _href=URL(a='Qualidade_Ambiental', c='default', f='index'),  _class="btn btn-success" )),
+          _id="homeSubmenu2", _class="collapse list-unstyled"
+          )
+        }}
+                  <!--  <li class="act2 " height=100%>
+           <a class="btn btn-secondary dropdown-toggle" type="button" 
+href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" >  Menu  </a> <span class="caret"></span> 
+                    </li> -->
+            </div>
+      </ul>
+    </nav>
 
   <div id="content">
        <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -87,8 +107,9 @@ href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" >  Menu  </a> <
             </button>
 
       </div>
-    </nav>
+      </nav>
   </div>
+
 </div>
 
 

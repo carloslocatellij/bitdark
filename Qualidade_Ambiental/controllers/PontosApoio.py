@@ -7,23 +7,23 @@
 #=====================================================#
 
 
-
+@auth.requires_login()
 @cache.action(time_expire=180, cache_model=cache.ram, quick='VS')
 def Pontos_de_Apoio():
 	response.flash = T("Bem Vindo!")
 	return response.render(dict(message=T('Sitema Web do Dept. de Qualidade Ambiental')))
 
-
+@auth.requires_login()
 def grafico_por_ponto():
 	import datetime
 	import plotador
 	ctrlgrf = SQLFORM.factory(
 		Field('IdPonto',db.EntradaPonto.IdPonto, label='Ponto', requires=IS_IN_DB(db((db.UnidadeDestino.Tipo=='Ponto de Apoio')) , 'UnidadeDestino.Id', db.UnidadeDestino._format)),
-		Field('Inicio', label='Inicio', type='date', requires= IS_DATE_IN_RANGE(minimum=datetime.date(2019, 6, 1), maximum=datetime.date.today(), error_message='deve ser ANO-Mês-Dia valido!'),),
-		Field('Fim', label='Fim', type='date', requires=IS_DATE_IN_RANGE(minimum=datetime.date(2019, 6, 1), maximum=datetime.date.today(), error_message='deve ser ANO-Mês-Dia valido!'),),
+		Field('Inicio', label='Inicio', type='date', requires= IS_DATE_IN_RANGE(format=T('%d/%m/%Y'),minimum=datetime.date(2019, 6, 1), maximum=datetime.date.today(), error_message='deve ser ANO-Mês-Dia valido!'),),
+		Field('Fim', label='Fim', type='date', requires=IS_DATE_IN_RANGE(format=T('%d/%m/%Y'),minimum=datetime.date(2019, 6, 1), maximum=datetime.date.today(), error_message='deve ser ANO-Mês-Dia valido!'),),
 		table_name='EntradaPonto',
 		formstyle='table3cols',
-		buttons = [INPUT(_name='Vai', _class='btn btn-primary btn-lg',_type="submit", value='Vai', _value="Vai", _onclick="this.form.action.value=Vai;this.form.submit()")])
+		buttons = [INPUT(_name='Gerar', _class='btn btn-primary btn-lg',_type="submit", value='Gerar', _value="Gerar", _onclick="this.form.action.value=Gerar;this.form.submit()")])
 
 	if ctrlgrf.process().accepted:
 		session.IdPonto = ctrlgrf.vars.IdPonto
@@ -37,7 +37,7 @@ def grafico_por_ponto():
 
 	return dict(ctrlgrf=ctrlgrf)
 
-
+@auth.requires_login()
 def Relatorio_dos_Pontos_de_Apoio():
 	import datetime
 	ctrlrelat = SQLFORM.factory(
@@ -45,7 +45,7 @@ def Relatorio_dos_Pontos_de_Apoio():
 		Field('Fim', label='Fim', type='date', requires= IS_EMPTY_OR(IS_DATE_IN_RANGE(format=T('%d/%m/%Y'),minimum=datetime.date(2019, 6, 1), maximum=datetime.date.today(), error_message='deve ser no formato DD/MM/AAAA!'))),
 		table_name='EntrPonto',
 		formstyle='divs',
-		buttons = [INPUT(_name='Vai', _class='btn btn-primary btn-lg',_type="submit", value='Vai', _value="Consulta", _onclick="this.form.action.value=Vai;this.form.submit()")])
+		buttons = [INPUT(_name='Gerar', _class='btn btn-primary btn-lg',_type="submit", value='Gerar', _value="Consulta", _onclick="this.form.action.value=Gerar;this.form.submit()")])
 
 	if ctrlrelat.process().accepted:
 		session.Inicio = ctrlrelat.vars.Inicio
@@ -80,62 +80,47 @@ def Relatorio_dos_Pontos_de_Apoio():
 	 querysql=ConsultaPPonto , somaRelatPontos=ConsultaSomaPontos, datamin=datamin[0]['_extra']['MIN(`EntradaPonto`.`Data`)'],\
 	 datamax=datamax[0]['_extra']['MAX(`EntradaPonto`.`Data`)']))
 
+@auth.requires_login()
 @cache.action(time_expire=30, cache_model=cache.ram, quick='VP')
 def relatorio_de_placas():
 	ctrlplaca = SQLFORM.factory(
 		#Field('IdPonto',db.EntradaPonto.IdPonto, label='Ponto'),
 		Field('Placa',db.EntradaPonto.IdPonto, label='Placa'),
 		formstyle='divs',
-		buttons = [INPUT(_name='Consulta', _class='btn btn-primary btn-lg',_type="submit", value='Vai', _value="Vai", _onclick="this.form.action.value=Vai;this.form.submit()")])
+		buttons = [INPUT(_name='Consulta', _class='btn btn-primary btn-lg',_type="submit", value='Gerar', _value="Gerar", _onclick="this.form.action.value=Gerar;this.form.submit()")])
+	placa = None
+	columns = []
 	if ctrlplaca.process().accepted:
-		session.Placa = ctrlplaca.vars.Placa
-		response.flash = 'Exibindo dados para: ',str(session.Placa)
+		placa = ctrlplaca.vars.Placa
+		response.flash = 'Exibindo dados para: ',str(placa)
 	elif ctrlplaca.errors:
 		response.flash = 'Erro no formulário'
 
-	if session.Placa != None:
-		query = db((EntradaPonto.IdPonto == UnidadeDestino.Id) & (EntradaPonto.Placa == session.Placa) )
+	if placa != None:
+		query = db((EntradaPonto.IdPonto == UnidadeDestino.Id) & (EntradaPonto.Placa.contains(str(ctrlplaca.vars.Placa))) )
 		grdRelatPlaca = query.select(
-			EntradaPonto.Placa,
-			EntradaPonto.Data,
+			EntradaPonto.Placa.with_alias('Placa'),
+			EntradaPonto.Data.with_alias('Data'),
 			EntradaPonto.Volume.with_alias('Volume_m3'),
 			EntradaPonto.Entulho.with_alias('Entulho_viagens'),
 			EntradaPonto.Poda.with_alias('Poda_viagens'),
 			EntradaPonto.Sofa.with_alias('Sofa_un'),
 			EntradaPonto.Colchao.with_alias('Colchão_un'),
 			UnidadeDestino.Atividade.with_alias('Ponto'),			
-			orderby=EntradaPonto.Data)
-	elif session.Placa == None:
-		query = db((EntradaPonto.IdPonto == UnidadeDestino.Id) & (~EntradaPonto.Placa.contains('###') ))
-		grdRelatPlaca = query.select(
-			EntradaPonto.Placa,
-			EntradaPonto.Volume.sum().with_alias('Volume_m3'),
-			EntradaPonto.Entulho.sum().with_alias('Entulho_viagens'),
-			EntradaPonto.Poda.sum().with_alias('Poda_viagens'),
-			EntradaPonto.Sofa.sum().with_alias('Sofa'),
-			EntradaPonto.Colchao.sum().with_alias('Colchão'),
-			groupby=EntradaPonto.Placa,
-			orderby=~EntradaPonto.Volume.sum(),
-			limitby=(0,250))
-	else:
-		query = db((EntradaPonto.IdPonto == UnidadeDestino.Id) & (~EntradaPonto.Placa.contains('###') ))
-		grdRelatPlaca = query.select(
-			EntradaPonto.Placa,
-			EntradaPonto.Volume.sum().with_alias('Volume_m3'),
-			EntradaPonto.Entulho.sum().with_alias('Entulho_viagens'),
-			EntradaPonto.Poda.sum().with_alias('Poda_viagens'),
-			EntradaPonto.Sofa.sum().with_alias('Sofa'),
-			EntradaPonto.Colchao.sum().with_alias('Colchão'),
-			groupby=EntradaPonto.Placa,
-			orderby=~EntradaPonto.Volume.sum())
+			orderby= ~EntradaPonto.Data | EntradaPonto.Volume )
 
-	return response.render(dict(grdRelatPlaca=grdRelatPlaca, ctrlplaca=ctrlplaca))
+	elif placa == None:
+		#query = db((EntradaPonto.IdPonto == UnidadeDestino.Id) & (~EntradaPonto.Placa.contains('###')) )
+		columns = ['Placa', 'Volume_m3' ,'Entulho_viagens', 'Poda_viagens', 'Sofa_(un)', 'Colchão_(un)']
+		grdRelatPlaca = db.executesql(
+"SELECT `EntradaPonto`.`Placa` as `Placa`, SUM(COALESCE(`EntradaPonto`.`Volume`, 0 )) as `Volume`, SUM(COALESCE(`EntradaPonto`.`Entulho`, 0 )) as `Entulho`, SUM(COALESCE(`EntradaPonto`.`Poda`, 0 )) as `Poda`,  SUM(COALESCE(`EntradaPonto`.`Sofa`, 0)) as `Sofa` , SUM(COALESCE(`EntradaPonto`.`Colchão`, 0 )) as `Colchao` FROM `EntradaPonto`, `UnidadeDestino`  WHERE `UnidadeDestino`.`Id` = `EntradaPonto`.`IdPonto` GROUP BY `EntradaPonto`.`PLaca` ORDER BY `EntradaPonto`.`Volume` DESC LIMIT  200 "
+			)
+
+	return response.render(dict(grdRelatPlaca=grdRelatPlaca, ctrlplaca=ctrlplaca, columns = columns, placa = placa))
 
 
-
+@auth.requires_login()
 def FormEntradaPonto():
-
-
 	if session.campospersits:
 		for k in session.campospersits:
 			db['EntradaPonto'][k].default = session.campospersits[k]
@@ -164,14 +149,14 @@ def FormEntradaPonto():
 
 	return dict(form=form)
 
-
+@auth.requires_login()
 def GridEntradaPonto():
 	grid = SQLFORM.smartgrid(db.EntradaPonto, fields=[db.EntradaPonto.Placa,  db.EntradaPonto.Data , db.EntradaPonto.IdPonto] \
 		,editable=True, deletable=True, orderby=~db.EntradaPonto.Id , field_id=db.EntradaPonto.Id \
 		,links = dict(header='Placa',body= lambda ids : A(URL('PontosApoio', 'GridEntradaPonto', Placa=ids))), user_signature=False)
 	return locals() #dict(grid=grid)
 
-
+@auth.requires_login()
 def grafico_por_residuo():
 	import datetime
 	import plotador
@@ -181,7 +166,7 @@ def grafico_por_residuo():
 		Field('Fim', label='Fim', type='date', requires=IS_DATE_IN_RANGE(format=T('%Y-%m-%d'),minimum=datetime.date(2019, 6, 1), maximum=datetime.date.today(), error_message='deve ser YYYY-MM-DD!')),
 		table_name='EntrResiduo',
 		formstyle='table3cols',
-		buttons = [INPUT(_name='Gerar', _class='btn btn-primary btn-lg',_type="submit", value='Gerar', _value="Gerar", _onclick="this.form.action.value=Vai;this.form.submit()")])
+		buttons = [INPUT(_name='Gerar', _class='btn btn-primary btn-lg',_type="submit", value='Gerar', _value="Gerar", _onclick="this.form.action.value=Gerar;this.form.submit()")])
 	if ctrlresiduo.process().accepted:
 		session.Residuo = ctrlresiduo.vars.Residuo
 		session.Inicio = ctrlresiduo.vars.Inicio

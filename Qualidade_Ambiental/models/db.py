@@ -7,6 +7,8 @@
 from gluon.contrib.appconfig import AppConfig
 from gluon.tools import Auth
 
+
+
 # -------------------------------------------------------------------------
 # This scaffolding model makes your app work on Google App Engine too
 # File is released under public domain and you can use without limitations
@@ -26,23 +28,24 @@ if request.global_settings.web2py_version < "2.15.5":
 # -------------------------------------------------------------------------
 configuration = AppConfig(reload=True)
 
-Tconect = ('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/Tconect' )
+Tconect = DAL('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/Tconect' )
 
 
 if not request.env.web2py_runtime_gae:
     # ---------------------------------------------------------------------
     # if NOT running on Google App Engine use SQLite or other DB
     # ---------------------------------------------------------------------
-    db = DAL(Tconect,
+    db = DAL('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/Tconect',
              pool_size=configuration.get('db.pool_size'),
-             migrate_enabled=False,
+             migrate_enabled=True,
+             #fake_migrate_all=True,
              check_reserved=['mysql'])
 
 else:
     # ---------------------------------------------------------------------
     # connect to Google BigTable (optional 'google:datastore://namespace')
     # ---------------------------------------------------------------------
-    db = DAL('google:datastore+ndb')
+    db = DAL(u'google:datastore+ndb')
     # ---------------------------------------------------------------------
     # store sessions and tickets there
     # ---------------------------------------------------------------------
@@ -90,20 +93,32 @@ response.form_label_separator = ''
 # -------------------------------------------------------------------------
 
 # host names must be a list of allowed host names (glob syntax allowed)
-auth = Auth(db, host_names=configuration.get('host.names'))
+auth = Auth(db,
+    cas_provider='https://qa.riopreto.sp.gov.br/MeioAmbienteRP/default/user/cas',
+     )
 
 # -------------------------------------------------------------------------
 # create all tables needed by auth, maybe add a list of extra fields
 # -------------------------------------------------------------------------
-from validador import IS_CPF
 
-auth.define_tables(username=False, signature=False)
+
+
+auth.define_tables(username=True, signature=False)
+
+from validador import IS_CPF
+auth.settings.extra_fields['auth_user'] = [
+    Field('IdDepto', 'integer'),
+    Field('CPF', 'text', requires=IS_CPF()),
+    ]
+
+
+auth.settings.update_fields = [ 'first_name', 'last_name', 'username', 'email', 'CPF', 'IdDepto']
 
 # -------------------------------------------------------------------------
 # configure email
 # -------------------------------------------------------------------------
 mail = auth.settings.mailer
-mail.settings.server = 'logging' if request.is_local else configuration.get('smtp.server')
+mail.settings.server = configuration.get('smtp.server') # 'logging' if request.is_local else 
 mail.settings.sender = configuration.get('smtp.sender')
 mail.settings.login = configuration.get('smtp.login')
 mail.settings.tls = configuration.get('smtp.tls') or False
@@ -112,9 +127,9 @@ mail.settings.ssl = configuration.get('smtp.ssl') or False
 # -------------------------------------------------------------------------
 # configure auth policy
 # -------------------------------------------------------------------------
-auth.settings.registration_requires_verification = False
-auth.settings.registration_requires_approval = False
-auth.settings.reset_password_requires_verification = True
+# auth.settings.registration_requires_verification = True
+# auth.settings.registration_requires_approval = False
+# auth.settings.reset_password_requires_verification = True
 
 # -------------------------------------------------------------------------  
 # read more at http://dev.w3.org/html5/markup/meta.name.html               
@@ -184,7 +199,7 @@ from validador import IS_CHKBOX01
 
 EntradaPonto = db.define_table('EntradaPonto',
     Field ('Id', 'id'),
-    Field ('Placa',  'string', length='8', required=True, requires = IS_MATCH('[ABCDEFGHIJKLMNOPQRSTUVWXYZ]{3}[#,\d]{4}', error_message='Não é Placa')),
+    Field ('Placa',  'string', length='9', required=True, requires = IS_MATCH('[ABCDEFGHIJKLMNOPQRSTUVWXYZ#]{3}', error_message='Não é Placa')),
     Field ('TipoVeic', 'integer', requires = IS_IN_SET(veiculos)),
     Field ('Data', 'date', required=True),
     Field ('Volume', 'decimal(3,2)', default=1.0 ,requires=IS_IN_SET([1.0, 2.0 ]), widget=SQLFORM.widgets.radio.widget ),
@@ -204,7 +219,7 @@ EntradaPonto = db.define_table('EntradaPonto',
 MedicoesOpac = db.define_table('MedicoesOpac',
     Field ('ID', 'id'),
     Field('PM', 'string', length='6'),
-    Field('Placa','string', length='8', required=True, requires = IS_MATCH('[ABCDEFGHIJKLMNOPQRSTUVWXYZ#]{3}', error_message='Não é Placa')),
+    Field('Placa','string', length='9', required=True, requires = IS_MATCH('[ABCDEFGHIJKLMNOPQRSTUVWXYZ#]{3}', error_message='Não é Placa')),
     Field('Data', 'date', required=True),
     Field('Hora', 'time', required=True),
     Field('Kmaximo', 'decimal(3,2)'),
