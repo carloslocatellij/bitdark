@@ -1,20 +1,3 @@
-# -*- coding: utf-8 -*-
-
-dbdocumentos = DAL('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/DBDocumentos', pool_size=configuration.get('db.pool_size'), migrate_enabled=configuration.get('db.migrate'))
-
-dbentidades = DAL('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/DBEntidades', pool_size=configuration.get('db.pool_size'), migrate_enabled=configuration.get('db.migrate'))
-
-dbpessoas = DAL('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/DBPessoas', pool_size=configuration.get('db.pool_size'), migrate_enabled=configuration.get('db.migrate'))
-
-#dba3p = DAL('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/DBA3P',  migrate_enabled=configuration.get('db.migrate'))
-
-dbconstrucoes = DAL('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/DBConstrucoes',  migrate_enabled=configuration.get('db.migrate'))
-
-dblocais = DAL('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/DBLocais', pool_size=configuration.get('db.pool_size'), migrate_enabled=configuration.get('db.migrate'))
-
-
-#dbentidades = DAL('mysql://DBGrnt:,.~~Grnt861@10.7.0.28/dbentidades',  migrate_enabled=configuration.get('db.migrate'))
-
 
 import validador
 
