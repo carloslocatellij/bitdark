@@ -1,3 +1,4 @@
+#!/usr/bin/python3.8
 # -*- coding: utf-8 -*-
 
 #=====================================================#
@@ -33,7 +34,7 @@ def grafico_por_ponto():
 		session.Fim = ctrlgrf.vars.Fim
 		response.flash = 'Exibindo dados para: ',str(session.pontoformat),str(session.Inicio),str(session.Fim)
 	elif ctrlgrf.errors:
-		response.flash = 'Erro no formulário'
+		response.flash = 'Erro no formulario'
 
 	return dict(ctrlgrf=ctrlgrf)
 
