@@ -1,0 +1,66 @@
+__pycache__
+
+# for web2py
+cache
+databases
+errors
+sessions
+private
+*0db.py
+admin
+examples
+welcome
+
+
+
+# inherit https://github.com/github/gitignore/blob/master/Python.gitignore
+
+*.py[co]
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# pyenv
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+#Translations
+*.mo
+
+#Mr Developer
+.mr.developer.cfg
+
+#.gitignore
+
